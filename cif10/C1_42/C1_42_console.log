@@ -1,0 +1,180 @@
+
+########################################################################
+# run start: 2026-08-13 09:57:47
+########################################################################
+[console-log] خروجی کنسول در فایل ذخیره می‌شود: C1_42_console.log
+========================================================================
+{
+  "moe": {
+    "num_experts": 4,
+    "top_k": 2,
+    "expert_hidden": 384,
+    "expert_dropout": 0.1,
+    "router_temperature": 1.0,
+    "router_noise_std": 0.01,
+    "router_detach_for_topk": false,
+    "combine_method": "softmax",
+    "capacity_factor": 2,
+    "moe_residual_scale": 1.0,
+    "use_load_balance": true,
+    "load_balance_coef": 0.0001,
+    "use_z_loss": true,
+    "z_loss_coef": 0.0001,
+    "use_router_entropy_aux": false,
+    "router_entropy_coef": 0.0
+  },
+  "num_classes": 10,
+  "dim": 256,
+  "moe_num_layers": 2,
+  "batch_size": 128,
+  "epochs": 150,
+  "lr": 0.0012,
+  "weight_decay": 0.05,
+  "adam_betas": [
+    0.9,
+    0.98
+  ],
+  "adam_eps": 0.0,
+  "seed": 42,
+  "num_workers": 0,
+  "device": "cuda",
+  "data_dir": "./data",
+  "local_cifar10": "cifar-10-python.tar.gz",
+  "train_random_crop_pad": 4,
+  "train_hflip": true,
+  "train_randaugment_ops": 2,
+  "train_randaugment_magnitude": 4,
+  "train_label_smoothing": 0.1,
+  "log_json": "C1_42.json",
+  "log_console": null,
+  "log_json_float_decimals": 4,
+  "checkpoint_path": null,
+  "checkpoint_dir": "checkpoints",
+  "checkpoint_filename": "C1_42.pt",
+  "training_checkpoint_path": null,
+  "resume_training_path": null,
+  "early_stop_patience": 12,
+  "early_stop_min_delta": 0.001,
+  "lr_warmup_epochs": 5,
+  "lr_min": 0.0,
+  "spec_metric_enabled": true,
+  "spec_ablation_max_batches": 50,
+  "use_grad_div": true,
+  "grad_div_coef": 0.01,
+  "grad_div_global_only": false,
+  "grad_div_spatial_only": true,
+  "grad_div_max_tokens": 128,
+  "use_router_div": false,
+  "router_div_coef": 0.003,
+  "router_div_max_tokens": 256,
+  "use_router_grad_div": false,
+  "router_grad_div_coef": 0.001,
+  "router_grad_div_max_tokens": 256,
+  "router_grad_div_global_only": true,
+  "router_grad_div_detach_upstream": true,
+  "router_grad_div_detach_sim": true,
+  "use_hybrid_spatial_moe": true,
+  "spatial_moe": {
+    "num_experts": 4,
+    "top_k": 2,
+    "expert_hidden": 384,
+    "expert_dropout": 0.1,
+    "router_temperature": 1.0,
+    "router_noise_std": 0.01,
+    "router_detach_for_topk": false,
+    "combine_method": "softmax",
+    "capacity_factor": 2,
+    "moe_residual_scale": 1.0,
+    "use_load_balance": true,
+    "load_balance_coef": 0.0001,
+    "use_z_loss": true,
+    "z_loss_coef": 0.0001,
+    "use_router_entropy_aux": false,
+    "router_entropy_coef": 0.0
+  },
+  "moe_num_spatial_layers": 1,
+  "moe_num_global_layers": 1,
+  "use_spatial_pos_embed": true,
+  "feature_channels": 256
+}
+========================================================================
+ep 1/150  tr@1=0.4570  tr@2=0.6628  tr@5=0.9039  te@1=0.5371 te@2=0.7385 te@5=0.9352  dr~0.000 util~1.000  es=12  spec_H=2.174 pur=0.171 sim=0.384
+ep 2/150  tr@1=0.6144  tr@2=0.7960  tr@5=0.9553  te@1=0.6415 te@2=0.8261 te@5=0.9710  dr~0.000 util~1.000  es=12  spec_H=2.080 pur=0.214 sim=0.361
+ep 3/150  tr@1=0.6923  tr@2=0.8488  tr@5=0.9709  te@1=0.7325 te@2=0.8808 te@5=0.9800  dr~0.000 util~1.000  es=12  spec_H=2.001 pur=0.245 sim=0.358
+ep 4/150  tr@1=0.7413  tr@2=0.8775  tr@5=0.9776  te@1=0.7694 te@2=0.8938 te@5=0.9845  dr~0.000 util~1.000  es=12  spec_H=1.899 pur=0.271 sim=0.430
+ep 5/150  tr@1=0.7720  tr@2=0.8956  tr@5=0.9828  te@1=0.7619 te@2=0.9016 te@5=0.9851  dr~0.000 util~1.000  es=11  spec_H=1.958 pur=0.257 sim=0.428
+ep 6/150  tr@1=0.7965  tr@2=0.9111  tr@5=0.9863  te@1=0.8135 te@2=0.9200 te@5=0.9876  dr~0.000 util~1.000  es=12  spec_H=1.967 pur=0.260 sim=0.390
+ep 7/150  tr@1=0.8196  tr@2=0.9242  tr@5=0.9892  te@1=0.8398 te@2=0.9372 te@5=0.9911  dr~0.000 util~1.000  es=12  spec_H=1.956 pur=0.259 sim=0.362
+ep 8/150  tr@1=0.8359  tr@2=0.9326  tr@5=0.9902  te@1=0.8367 te@2=0.9337 te@5=0.9893  dr~0.000 util~1.000  es=11  spec_H=1.875 pur=0.269 sim=0.327
+ep 9/150  tr@1=0.8483  tr@2=0.9414  tr@5=0.9921  te@1=0.8360 te@2=0.9339 te@5=0.9891  dr~0.000 util~1.000  es=10  spec_H=1.936 pur=0.261 sim=0.338
+ep 10/150  tr@1=0.8628  tr@2=0.9471  tr@5=0.9925  te@1=0.8434 te@2=0.9390 te@5=0.9929  dr~0.000 util~1.000  es=12  spec_H=1.897 pur=0.261 sim=0.267
+ep 11/150  tr@1=0.8736  tr@2=0.9523  tr@5=0.9937  te@1=0.8613 te@2=0.9481 te@5=0.9943  dr~0.000 util~1.000  es=12  spec_H=1.898 pur=0.270 sim=0.308
+ep 12/150  tr@1=0.8796  tr@2=0.9565  tr@5=0.9943  te@1=0.8859 te@2=0.9617 te@5=0.9939  dr~0.000 util~1.000  es=12  spec_H=1.916 pur=0.267 sim=0.312
+ep 13/150  tr@1=0.8868  tr@2=0.9590  tr@5=0.9951  te@1=0.8762 te@2=0.9581 te@5=0.9961  dr~0.000 util~1.000  es=11  spec_H=1.872 pur=0.274 sim=0.307
+ep 14/150  tr@1=0.8931  tr@2=0.9625  tr@5=0.9961  te@1=0.8703 te@2=0.9587 te@5=0.9955  dr~0.000 util~1.000  es=10  spec_H=1.917 pur=0.264 sim=0.310
+ep 15/150  tr@1=0.8994  tr@2=0.9643  tr@5=0.9963  te@1=0.8894 te@2=0.9628 te@5=0.9960  dr~0.000 util~1.000  es=12  spec_H=1.906 pur=0.263 sim=0.332
+ep 16/150  tr@1=0.9052  tr@2=0.9670  tr@5=0.9963  te@1=0.8907 te@2=0.9642 te@5=0.9962  dr~0.000 util~1.000  es=12  spec_H=1.874 pur=0.270 sim=0.345
+ep 17/150  tr@1=0.9093  tr@2=0.9702  tr@5=0.9966  te@1=0.8966 te@2=0.9673 te@5=0.9966  dr~0.000 util~1.000  es=12  spec_H=1.884 pur=0.263 sim=0.350
+ep 18/150  tr@1=0.9137  tr@2=0.9717  tr@5=0.9968  te@1=0.9074 te@2=0.9677 te@5=0.9960  dr~0.000 util~1.000  es=12  spec_H=1.838 pur=0.274 sim=0.375
+ep 19/150  tr@1=0.9182  tr@2=0.9754  tr@5=0.9976  te@1=0.9084 te@2=0.9713 te@5=0.9960  dr~0.000 util~1.000  es=11  spec_H=1.848 pur=0.275 sim=0.376
+ep 20/150  tr@1=0.9220  tr@2=0.9756  tr@5=0.9974  te@1=0.9011 te@2=0.9689 te@5=0.9973  dr~0.000 util~1.000  es=10  spec_H=1.833 pur=0.281 sim=0.389
+ep 21/150  tr@1=0.9250  tr@2=0.9769  tr@5=0.9975  te@1=0.9123 te@2=0.9713 te@5=0.9960  dr~0.000 util~1.000  es=12  spec_H=1.831 pur=0.278 sim=0.405
+ep 22/150  tr@1=0.9285  tr@2=0.9785  tr@5=0.9979  te@1=0.9092 te@2=0.9709 te@5=0.9964  dr~0.000 util~1.000  es=11  spec_H=1.838 pur=0.277 sim=0.408
+ep 23/150  tr@1=0.9315  tr@2=0.9788  tr@5=0.9981  te@1=0.9056 te@2=0.9689 te@5=0.9957  dr~0.000 util~1.000  es=10  spec_H=1.827 pur=0.282 sim=0.416
+ep 24/150  tr@1=0.9336  tr@2=0.9809  tr@5=0.9982  te@1=0.9034 te@2=0.9642 te@5=0.9967  dr~0.000 util~1.000  es=9  spec_H=1.810 pur=0.280 sim=0.430
+ep 25/150  tr@1=0.9349  tr@2=0.9808  tr@5=0.9983  te@1=0.9162 te@2=0.9723 te@5=0.9965  dr~0.000 util~1.000  es=12  spec_H=1.848 pur=0.276 sim=0.436
+ep 26/150  tr@1=0.9397  tr@2=0.9835  tr@5=0.9980  te@1=0.9162 te@2=0.9708 te@5=0.9967  dr~0.000 util~1.000  es=11  spec_H=1.864 pur=0.275 sim=0.459
+ep 27/150  tr@1=0.9420  tr@2=0.9839  tr@5=0.9986  te@1=0.9175 te@2=0.9714 te@5=0.9967  dr~0.000 util~1.000  es=12  spec_H=1.865 pur=0.271 sim=0.458
+ep 28/150  tr@1=0.9418  tr@2=0.9831  tr@5=0.9984  te@1=0.9099 te@2=0.9686 te@5=0.9968  dr~0.000 util~1.000  es=11  spec_H=1.839 pur=0.274 sim=0.456
+ep 29/150  tr@1=0.9451  tr@2=0.9858  tr@5=0.9984  te@1=0.9163 te@2=0.9701 te@5=0.9957  dr~0.000 util~1.000  es=10  spec_H=1.833 pur=0.274 sim=0.462
+ep 30/150  tr@1=0.9467  tr@2=0.9856  tr@5=0.9987  te@1=0.9154 te@2=0.9729 te@5=0.9969  dr~0.000 util~1.000  es=9  spec_H=1.842 pur=0.271 sim=0.469
+ep 31/150  tr@1=0.9490  tr@2=0.9863  tr@5=0.9987  te@1=0.9120 te@2=0.9726 te@5=0.9961  dr~0.000 util~1.000  es=8  spec_H=1.841 pur=0.282 sim=0.471
+ep 32/150  tr@1=0.9481  tr@2=0.9864  tr@5=0.9988  te@1=0.9084 te@2=0.9719 te@5=0.9954  dr~0.000 util~1.000  es=7  spec_H=1.810 pur=0.281 sim=0.476
+ep 33/150  tr@1=0.9485  tr@2=0.9869  tr@5=0.9989  te@1=0.9217 te@2=0.9748 te@5=0.9952  dr~0.000 util~1.000  es=12  spec_H=1.838 pur=0.275 sim=0.483
+ep 34/150  tr@1=0.9516  tr@2=0.9875  tr@5=0.9988  te@1=0.9153 te@2=0.9702 te@5=0.9968  dr~0.000 util~1.000  es=11  spec_H=1.848 pur=0.273 sim=0.479
+ep 35/150  tr@1=0.9535  tr@2=0.9882  tr@5=0.9990  te@1=0.9213 te@2=0.9719 te@5=0.9964  dr~0.000 util~1.000  es=10  spec_H=1.847 pur=0.285 sim=0.481
+ep 36/150  tr@1=0.9554  tr@2=0.9882  tr@5=0.9988  te@1=0.9215 te@2=0.9755 te@5=0.9959  dr~0.000 util~1.000  es=9  spec_H=1.814 pur=0.279 sim=0.483
+ep 37/150  tr@1=0.9573  tr@2=0.9893  tr@5=0.9991  te@1=0.9193 te@2=0.9727 te@5=0.9958  dr~0.000 util~1.000  es=8  spec_H=1.840 pur=0.272 sim=0.481
+ep 38/150  tr@1=0.9559  tr@2=0.9893  tr@5=0.9992  te@1=0.9192 te@2=0.9716 te@5=0.9955  dr~0.000 util~1.000  es=7  spec_H=1.811 pur=0.283 sim=0.492
+ep 39/150  tr@1=0.9590  tr@2=0.9902  tr@5=0.9990  te@1=0.9177 te@2=0.9722 te@5=0.9961  dr~0.000 util~1.000  es=6  spec_H=1.814 pur=0.274 sim=0.494
+ep 40/150  tr@1=0.9591  tr@2=0.9901  tr@5=0.9989  te@1=0.9092 te@2=0.9684 te@5=0.9956  dr~0.000 util~1.000  es=5  spec_H=1.819 pur=0.281 sim=0.497
+ep 41/150  tr@1=0.9612  tr@2=0.9903  tr@5=0.9992  te@1=0.9195 te@2=0.9713 te@5=0.9960  dr~0.000 util~1.000  es=4  spec_H=1.829 pur=0.275 sim=0.497
+ep 42/150  tr@1=0.9607  tr@2=0.9910  tr@5=0.9992  te@1=0.9231 te@2=0.9778 te@5=0.9964  dr~0.000 util~1.000  es=12  spec_H=1.816 pur=0.276 sim=0.511
+ep 43/150  tr@1=0.9629  tr@2=0.9914  tr@5=0.9992  te@1=0.9267 te@2=0.9745 te@5=0.9962  dr~0.000 util~1.000  es=12  spec_H=1.800 pur=0.277 sim=0.506
+ep 44/150  tr@1=0.9637  tr@2=0.9910  tr@5=0.9993  te@1=0.9254 te@2=0.9752 te@5=0.9958  dr~0.000 util~1.000  es=11  spec_H=1.821 pur=0.280 sim=0.509
+ep 45/150  tr@1=0.9634  tr@2=0.9918  tr@5=0.9994  te@1=0.9226 te@2=0.9749 te@5=0.9962  dr~0.000 util~1.000  es=10  spec_H=1.818 pur=0.279 sim=0.497
+ep 46/150  tr@1=0.9660  tr@2=0.9919  tr@5=0.9994  te@1=0.9200 te@2=0.9742 te@5=0.9949  dr~0.000 util~1.000  es=9  spec_H=1.821 pur=0.270 sim=0.498
+ep 47/150  tr@1=0.9660  tr@2=0.9924  tr@5=0.9993  te@1=0.9262 te@2=0.9773 te@5=0.9962  dr~0.000 util~1.000  es=8  spec_H=1.819 pur=0.270 sim=0.502
+ep 48/150  tr@1=0.9665  tr@2=0.9919  tr@5=0.9994  te@1=0.9210 te@2=0.9755 te@5=0.9951  dr~0.000 util~1.000  es=7  spec_H=1.824 pur=0.271 sim=0.493
+ep 49/150  tr@1=0.9682  tr@2=0.9926  tr@5=0.9994  te@1=0.9228 te@2=0.9737 te@5=0.9957  dr~0.000 util~1.000  es=6  spec_H=1.840 pur=0.274 sim=0.495
+ep 50/150  tr@1=0.9677  tr@2=0.9919  tr@5=0.9993  te@1=0.9270 te@2=0.9778 te@5=0.9965  dr~0.000 util~1.000  es=5  spec_H=1.810 pur=0.274 sim=0.495
+ep 51/150  tr@1=0.9697  tr@2=0.9931  tr@5=0.9993  te@1=0.9245 te@2=0.9740 te@5=0.9959  dr~0.000 util~1.000  es=4  spec_H=1.822 pur=0.269 sim=0.496
+ep 52/150  tr@1=0.9693  tr@2=0.9937  tr@5=0.9993  te@1=0.9253 te@2=0.9752 te@5=0.9951  dr~0.000 util~1.000  es=3  spec_H=1.801 pur=0.283 sim=0.493
+ep 53/150  tr@1=0.9704  tr@2=0.9935  tr@5=0.9994  te@1=0.9311 te@2=0.9777 te@5=0.9969  dr~0.000 util~1.000  es=12  spec_H=1.812 pur=0.270 sim=0.493
+ep 54/150  tr@1=0.9712  tr@2=0.9936  tr@5=0.9994  te@1=0.9292 te@2=0.9768 te@5=0.9967  dr~0.000 util~1.000  es=11  spec_H=1.818 pur=0.271 sim=0.487
+ep 55/150  tr@1=0.9720  tr@2=0.9943  tr@5=0.9994  te@1=0.9289 te@2=0.9755 te@5=0.9959  dr~0.000 util~1.000  es=10  spec_H=1.823 pur=0.270 sim=0.491
+ep 56/150  tr@1=0.9708  tr@2=0.9940  tr@5=0.9996  te@1=0.9234 te@2=0.9742 te@5=0.9959  dr~0.000 util~1.000  es=9  spec_H=1.817 pur=0.270 sim=0.492
+ep 57/150  tr@1=0.9728  tr@2=0.9946  tr@5=0.9995  te@1=0.9312 te@2=0.9761 te@5=0.9942  dr~0.000 util~1.000  es=8  spec_H=1.809 pur=0.272 sim=0.497
+ep 58/150  tr@1=0.9738  tr@2=0.9946  tr@5=0.9994  te@1=0.9278 te@2=0.9761 te@5=0.9944  dr~0.000 util~1.000  es=7  spec_H=1.811 pur=0.276 sim=0.485
+ep 59/150  tr@1=0.9746  tr@2=0.9946  tr@5=0.9995  te@1=0.9260 te@2=0.9744 te@5=0.9959  dr~0.000 util~1.000  es=6  spec_H=1.812 pur=0.275 sim=0.489
+ep 60/150  tr@1=0.9739  tr@2=0.9949  tr@5=0.9997  te@1=0.9292 te@2=0.9771 te@5=0.9962  dr~0.000 util~1.000  es=5  spec_H=1.826 pur=0.276 sim=0.494
+ep 61/150  tr@1=0.9743  tr@2=0.9950  tr@5=0.9996  te@1=0.9265 te@2=0.9765 te@5=0.9961  dr~0.000 util~1.000  es=4  spec_H=1.831 pur=0.266 sim=0.497
+ep 62/150  tr@1=0.9752  tr@2=0.9949  tr@5=0.9995  te@1=0.9336 te@2=0.9771 te@5=0.9962  dr~0.000 util~1.000  es=12  spec_H=1.824 pur=0.267 sim=0.494
+ep 63/150  tr@1=0.9772  tr@2=0.9955  tr@5=0.9996  te@1=0.9293 te@2=0.9762 te@5=0.9958  dr~0.000 util~1.000  es=11  spec_H=1.819 pur=0.277 sim=0.489
+ep 64/150  tr@1=0.9756  tr@2=0.9950  tr@5=0.9996  te@1=0.9274 te@2=0.9755 te@5=0.9960  dr~0.000 util~1.000  es=10  spec_H=1.811 pur=0.277 sim=0.503
+ep 65/150  tr@1=0.9762  tr@2=0.9948  tr@5=0.9998  te@1=0.9285 te@2=0.9734 te@5=0.9957  dr~0.000 util~1.000  es=9  spec_H=1.816 pur=0.274 sim=0.498
+ep 66/150  tr@1=0.9774  tr@2=0.9952  tr@5=0.9996  te@1=0.9313 te@2=0.9763 te@5=0.9953  dr~0.000 util~1.000  es=8  spec_H=1.811 pur=0.274 sim=0.500
+ep 67/150  tr@1=0.9790  tr@2=0.9959  tr@5=0.9996  te@1=0.9295 te@2=0.9741 te@5=0.9940  dr~0.000 util~1.000  es=7  spec_H=1.793 pur=0.276 sim=0.498
+ep 68/150  tr@1=0.9790  tr@2=0.9959  tr@5=0.9996  te@1=0.9293 te@2=0.9778 te@5=0.9940  dr~0.000 util~1.000  es=6  spec_H=1.810 pur=0.272 sim=0.493
+ep 69/150  tr@1=0.9778  tr@2=0.9959  tr@5=0.9997  te@1=0.9237 te@2=0.9738 te@5=0.9945  dr~0.000 util~1.000  es=5  spec_H=1.806 pur=0.272 sim=0.499
+ep 70/150  tr@1=0.9797  tr@2=0.9958  tr@5=0.9996  te@1=0.9304 te@2=0.9769 te@5=0.9958  dr~0.000 util~1.000  es=4  spec_H=1.812 pur=0.274 sim=0.496
+ep 71/150  tr@1=0.9805  tr@2=0.9961  tr@5=0.9997  te@1=0.9302 te@2=0.9778 te@5=0.9959  dr~0.000 util~1.000  es=3  spec_H=1.835 pur=0.265 sim=0.498
+ep 72/150  tr@1=0.9806  tr@2=0.9964  tr@5=0.9996  te@1=0.9289 te@2=0.9774 te@5=0.9970  dr~0.000 util~1.000  es=2  spec_H=1.829 pur=0.271 sim=0.491
+ep 73/150  tr@1=0.9804  tr@2=0.9966  tr@5=0.9997  te@1=0.9297 te@2=0.9769 te@5=0.9961  dr~0.000 util~1.000  es=1  spec_H=1.817 pur=0.267 sim=0.496
+ep 74/150  tr@1=0.9819  tr@2=0.9968  tr@5=0.9995  te@1=0.9305 te@2=0.9782 te@5=0.9953  dr~0.000 util~1.000  es=0  spec_H=1.811 pur=0.268 sim=0.493
+early stop: eval top1 برای 12 اپوک بهبود نداشت (best=0.9336, min_delta=0.001)
+[log] جزئیات اپوک best (ep=62, te@1=0.9336) → C1_42.json
+[checkpoint] بهترین مدل ذخیره شد: checkpoints/C1_42.pt (test_top1=0.9336)
+########################################################################
+# run end: 2026-08-13 12:50:39
+########################################################################

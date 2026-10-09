@@ -1,0 +1,132 @@
+
+########################################################################
+# run start: 2026-09-03 13:22:26
+########################################################################
+[console-log] خروجی کنسول در فایل ذخیره می‌شود: C1_R_42_0L_console.log
+========================================================================
+{
+  "moe": {
+    "num_experts": 4,
+    "top_k": 2,
+    "expert_hidden": 384,
+    "expert_dropout": 0.1,
+    "router_temperature": 1.0,
+    "router_noise_std": 0.01,
+    "router_detach_for_topk": false,
+    "combine_method": "softmax",
+    "capacity_factor": 2,
+    "moe_residual_scale": 1.0,
+    "use_load_balance": true,
+    "load_balance_coef": 0.0001,
+    "use_z_loss": true,
+    "z_loss_coef": 0.0001,
+    "use_router_entropy_aux": false,
+    "router_entropy_coef": 0.0
+  },
+  "num_classes": 10,
+  "dim": 256,
+  "moe_num_layers": 2,
+  "batch_size": 128,
+  "epochs": 80,
+  "lr": 0.0012,
+  "weight_decay": 0.05,
+  "adam_betas": [
+    0.9,
+    0.98
+  ],
+  "adam_eps": 0.0,
+  "seed": 42,
+  "num_workers": 0,
+  "device": "cuda",
+  "data_dir": "./data",
+  "in_channels": 1,
+  "image_size": 32,
+  "train_random_crop_pad": 2,
+  "train_hflip": false,
+  "train_randaugment_ops": 0,
+  "train_randaugment_magnitude": 4,
+  "train_label_smoothing": 0.0,
+  "log_json": "C1_R_42_0L.json",
+  "log_console": null,
+  "log_json_float_decimals": 4,
+  "checkpoint_path": null,
+  "checkpoint_dir": "checkpoints",
+  "checkpoint_filename": "C1_R_42_0L.pt",
+  "training_checkpoint_path": null,
+  "resume_training_path": null,
+  "early_stop_patience": 12,
+  "early_stop_min_delta": 0.0005,
+  "lr_warmup_epochs": 5,
+  "lr_min": 0.0,
+  "spec_metric_enabled": true,
+  "spec_ablation_max_batches": 50,
+  "use_grad_div": true,
+  "grad_div_coef": 0.01,
+  "grad_div_global_only": false,
+  "grad_div_spatial_only": false,
+  "grad_div_max_tokens": 128,
+  "grad_div_weight_by_magnitude": true,
+  "use_router_div": false,
+  "router_div_coef": 0.003,
+  "router_div_max_tokens": 256,
+  "use_router_grad_div": true,
+  "router_grad_div_coef": 0.001,
+  "router_grad_div_max_tokens": 256,
+  "router_grad_div_global_only": true,
+  "router_grad_div_detach_upstream": true,
+  "router_grad_div_detach_sim": true,
+  "use_hybrid_spatial_moe": true,
+  "spatial_moe": {
+    "num_experts": 4,
+    "top_k": 2,
+    "expert_hidden": 384,
+    "expert_dropout": 0.1,
+    "router_temperature": 1.0,
+    "router_noise_std": 0.01,
+    "router_detach_for_topk": false,
+    "combine_method": "softmax",
+    "capacity_factor": 2,
+    "moe_residual_scale": 1.0,
+    "use_load_balance": true,
+    "load_balance_coef": 0.0001,
+    "use_z_loss": true,
+    "z_loss_coef": 0.0001,
+    "use_router_entropy_aux": false,
+    "router_entropy_coef": 0.0
+  },
+  "moe_num_spatial_layers": 1,
+  "moe_num_global_layers": 1,
+  "use_spatial_pos_embed": true,
+  "feature_channels": 256
+}
+========================================================================
+ep 1/80  tr@1=0.9565  tr@2=0.9806  tr@5=0.9945  te@1=0.9707 te@2=0.9940 te@5=1.0000  dr~0.000 util~1.000  es=12  spec_H=2.074 pur=0.186 sim=0.258
+ep 2/80  tr@1=0.9836  tr@2=0.9958  tr@5=0.9997  te@1=0.9879 te@2=0.9984 te@5=1.0000  dr~0.000 util~1.000  es=12  spec_H=2.025 pur=0.190 sim=0.210
+ep 3/80  tr@1=0.9857  tr@2=0.9972  tr@5=0.9999  te@1=0.9879 te@2=0.9981 te@5=0.9998  dr~0.000 util~1.000  es=11  spec_H=2.031 pur=0.196 sim=0.283
+ep 4/80  tr@1=0.9878  tr@2=0.9976  tr@5=0.9999  te@1=0.9916 te@2=0.9992 te@5=1.0000  dr~0.000 util~1.000  es=12  spec_H=1.987 pur=0.212 sim=0.386
+ep 5/80  tr@1=0.9883  tr@2=0.9980  tr@5=0.9999  te@1=0.9903 te@2=0.9980 te@5=1.0000  dr~0.000 util~1.000  es=11  spec_H=1.895 pur=0.253 sim=0.445
+ep 6/80  tr@1=0.9900  tr@2=0.9981  tr@5=0.9999  te@1=0.9917 te@2=0.9986 te@5=1.0000  dr~0.000 util~1.000  es=10  spec_H=1.922 pur=0.226 sim=0.467
+ep 7/80  tr@1=0.9918  tr@2=0.9986  tr@5=0.9999  te@1=0.9906 te@2=0.9988 te@5=1.0000  dr~0.000 util~1.000  es=9  spec_H=1.877 pur=0.264 sim=0.483
+ep 8/80  tr@1=0.9922  tr@2=0.9986  tr@5=1.0000  te@1=0.9933 te@2=0.9993 te@5=0.9999  dr~0.000 util~1.000  es=12  spec_H=1.908 pur=0.259 sim=0.494
+ep 9/80  tr@1=0.9932  tr@2=0.9993  tr@5=1.0000  te@1=0.9910 te@2=0.9985 te@5=0.9999  dr~0.000 util~1.000  es=11  spec_H=1.915 pur=0.222 sim=0.513
+ep 10/80  tr@1=0.9940  tr@2=0.9991  tr@5=1.0000  te@1=0.9933 te@2=0.9991 te@5=1.0000  dr~0.000 util~1.000  es=10  spec_H=1.908 pur=0.258 sim=0.561
+ep 11/80  tr@1=0.9942  tr@2=0.9992  tr@5=1.0000  te@1=0.9947 te@2=0.9997 te@5=1.0000  dr~0.000 util~1.000  es=12  spec_H=1.907 pur=0.255 sim=0.562
+ep 12/80  tr@1=0.9945  tr@2=0.9991  tr@5=1.0000  te@1=0.9958 te@2=0.9998 te@5=1.0000  dr~0.000 util~1.000  es=12  spec_H=1.943 pur=0.235 sim=0.593
+ep 13/80  tr@1=0.9953  tr@2=0.9994  tr@5=1.0000  te@1=0.9940 te@2=0.9994 te@5=1.0000  dr~0.000 util~1.000  es=11  spec_H=1.898 pur=0.260 sim=0.601
+ep 14/80  tr@1=0.9952  tr@2=0.9995  tr@5=1.0000  te@1=0.9951 te@2=0.9998 te@5=1.0000  dr~0.000 util~1.000  es=10  spec_H=1.940 pur=0.239 sim=0.615
+ep 15/80  tr@1=0.9959  tr@2=0.9994  tr@5=1.0000  te@1=0.9932 te@2=0.9992 te@5=1.0000  dr~0.000 util~1.000  es=9  spec_H=1.924 pur=0.248 sim=0.632
+ep 16/80  tr@1=0.9957  tr@2=0.9995  tr@5=1.0000  te@1=0.9958 te@2=0.9998 te@5=1.0000  dr~0.000 util~1.000  es=8  spec_H=1.895 pur=0.133 sim=0.630
+ep 17/80  tr@1=0.9962  tr@2=0.9996  tr@5=1.0000  te@1=0.9955 te@2=0.9996 te@5=1.0000  dr~0.000 util~1.000  es=7  spec_H=1.937 pur=0.240 sim=0.647
+ep 18/80  tr@1=0.9958  tr@2=0.9996  tr@5=1.0000  te@1=0.9931 te@2=0.9991 te@5=1.0000  dr~0.000 util~1.000  es=6  spec_H=1.955 pur=0.234 sim=0.639
+ep 19/80  tr@1=0.9966  tr@2=0.9998  tr@5=1.0000  te@1=0.9945 te@2=0.9996 te@5=1.0000  dr~0.000 util~1.000  es=5  spec_H=1.973 pur=0.217 sim=0.646
+ep 20/80  tr@1=0.9966  tr@2=0.9998  tr@5=1.0000  te@1=0.9945 te@2=0.9997 te@5=0.9999  dr~0.000 util~1.000  es=4  spec_H=2.063 pur=0.196 sim=0.653
+ep 21/80  tr@1=0.9969  tr@2=0.9998  tr@5=1.0000  te@1=0.9938 te@2=0.9993 te@5=1.0000  dr~0.000 util~1.000  es=3  spec_H=2.011 pur=0.192 sim=0.695
+ep 22/80  tr@1=0.9969  tr@2=0.9998  tr@5=1.0000  te@1=0.9939 te@2=0.9995 te@5=0.9999  dr~0.000 util~1.000  es=2  spec_H=2.033 pur=0.183 sim=0.695
+ep 23/80  tr@1=0.9976  tr@2=0.9999  tr@5=1.0000  te@1=0.9947 te@2=0.9990 te@5=1.0000  dr~0.000 util~1.000  es=1  spec_H=2.019 pur=0.201 sim=0.706
+ep 24/80  tr@1=0.9971  tr@2=0.9998  tr@5=1.0000  te@1=0.9945 te@2=0.9993 te@5=1.0000  dr~0.000 util~1.000  es=0  spec_H=1.980 pur=0.245 sim=0.719
+early stop: eval top1 برای 12 اپوک بهبود نداشت (best=0.9958, min_delta=0.0005)
+[log] جزئیات اپوک best (ep=12, te@1=0.9958) → C1_R_42_0L.json
+[checkpoint] بهترین مدل ذخیره شد: checkpoints/C1_R_42_0L.pt (test_top1=0.9958)
+########################################################################
+# run end: 2026-09-03 14:22:35
+########################################################################

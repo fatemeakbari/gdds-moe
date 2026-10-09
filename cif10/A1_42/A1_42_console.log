@@ -1,0 +1,150 @@
+
+########################################################################
+# run start: 2026-08-13 07:10:54
+########################################################################
+[console-log] خروجی کنسول در فایل ذخیره می‌شود: A1_42_console.log
+========================================================================
+{
+  "moe": {
+    "num_experts": 4,
+    "top_k": 2,
+    "expert_hidden": 384,
+    "expert_dropout": 0.1,
+    "router_temperature": 1.0,
+    "router_noise_std": 0.01,
+    "router_detach_for_topk": false,
+    "combine_method": "softmax",
+    "capacity_factor": 2,
+    "moe_residual_scale": 1.0,
+    "use_load_balance": true,
+    "load_balance_coef": 0.0001,
+    "use_z_loss": true,
+    "z_loss_coef": 0.0001,
+    "use_router_entropy_aux": false,
+    "router_entropy_coef": 0.0
+  },
+  "num_classes": 10,
+  "dim": 256,
+  "moe_num_layers": 2,
+  "batch_size": 128,
+  "epochs": 150,
+  "lr": 0.0012,
+  "weight_decay": 0.05,
+  "adam_betas": [
+    0.9,
+    0.98
+  ],
+  "adam_eps": 0.0,
+  "seed": 42,
+  "num_workers": 0,
+  "device": "cuda",
+  "data_dir": "./data",
+  "local_cifar10": "cifar-10-python.tar.gz",
+  "train_random_crop_pad": 4,
+  "train_hflip": true,
+  "train_randaugment_ops": 2,
+  "train_randaugment_magnitude": 4,
+  "train_label_smoothing": 0.1,
+  "log_json": "A1_42.json",
+  "log_console": null,
+  "log_json_float_decimals": 4,
+  "checkpoint_path": null,
+  "checkpoint_dir": "checkpoints",
+  "checkpoint_filename": "A1_42.pt",
+  "training_checkpoint_path": null,
+  "resume_training_path": null,
+  "early_stop_patience": 12,
+  "early_stop_min_delta": 0.001,
+  "lr_warmup_epochs": 5,
+  "lr_min": 0.0,
+  "spec_metric_enabled": true,
+  "spec_ablation_max_batches": 50,
+  "use_hybrid_spatial_moe": true,
+  "spatial_moe": {
+    "num_experts": 4,
+    "top_k": 2,
+    "expert_hidden": 384,
+    "expert_dropout": 0.1,
+    "router_temperature": 1.0,
+    "router_noise_std": 0.01,
+    "router_detach_for_topk": false,
+    "combine_method": "softmax",
+    "capacity_factor": 2,
+    "moe_residual_scale": 1.0,
+    "use_load_balance": true,
+    "load_balance_coef": 0.0001,
+    "use_z_loss": true,
+    "z_loss_coef": 0.0001,
+    "use_router_entropy_aux": false,
+    "router_entropy_coef": 0.0
+  },
+  "moe_num_spatial_layers": 1,
+  "moe_num_global_layers": 1,
+  "use_spatial_pos_embed": true,
+  "feature_channels": 256
+}
+========================================================================
+/tmp/ipykernel_6518/3325387274.py:1205: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.
+  tf.extractall(path=root)
+ep 1/150  tr@1=0.4570  tr@2=0.6628  tr@5=0.9040  te@1=0.5365 te@2=0.7384 te@5=0.9352  dr~0.000 util~1.000  es=12  spec_H=2.091 pur=0.180 sim=0.300
+ep 2/150  tr@1=0.6142  tr@2=0.7959  tr@5=0.9556  te@1=0.6328 te@2=0.8235 te@5=0.9703  dr~0.000 util~1.000  es=12  spec_H=2.084 pur=0.181 sim=0.035
+ep 3/150  tr@1=0.6919  tr@2=0.8489  tr@5=0.9705  te@1=0.7373 te@2=0.8858 te@5=0.9801  dr~0.000 util~1.000  es=12  spec_H=2.096 pur=0.177 sim=0.117
+ep 4/150  tr@1=0.7399  tr@2=0.8781  tr@5=0.9779  te@1=0.7836 te@2=0.9031 te@5=0.9853  dr~0.000 util~1.000  es=12  spec_H=2.076 pur=0.183 sim=0.175
+/opt/conda/lib/python3.12/site-packages/torch/optim/lr_scheduler.py:243: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+ep 5/150  tr@1=0.7705  tr@2=0.8948  tr@5=0.9832  te@1=0.7546 te@2=0.8890 te@5=0.9849  dr~0.000 util~1.000  es=11  spec_H=2.040 pur=0.199 sim=0.221
+ep 6/150  tr@1=0.7939  tr@2=0.9098  tr@5=0.9857  te@1=0.8234 te@2=0.9246 te@5=0.9893  dr~0.000 util~1.000  es=12  spec_H=2.079 pur=0.185 sim=0.251
+ep 7/150  tr@1=0.8177  tr@2=0.9242  tr@5=0.9886  te@1=0.8411 te@2=0.9366 te@5=0.9914  dr~0.000 util~1.000  es=12  spec_H=2.041 pur=0.197 sim=0.276
+ep 8/150  tr@1=0.8365  tr@2=0.9324  tr@5=0.9900  te@1=0.8431 te@2=0.9314 te@5=0.9871  dr~0.000 util~1.000  es=12  spec_H=2.087 pur=0.192 sim=0.291
+ep 9/150  tr@1=0.8497  tr@2=0.9406  tr@5=0.9917  te@1=0.8469 te@2=0.9388 te@5=0.9921  dr~0.000 util~1.000  es=12  spec_H=2.016 pur=0.208 sim=0.309
+ep 10/150  tr@1=0.8618  tr@2=0.9465  tr@5=0.9930  te@1=0.8436 te@2=0.9322 te@5=0.9927  dr~0.000 util~1.000  es=11  spec_H=2.005 pur=0.202 sim=0.280
+ep 11/150  tr@1=0.8708  tr@2=0.9526  tr@5=0.9939  te@1=0.8665 te@2=0.9490 te@5=0.9935  dr~0.000 util~1.000  es=12  spec_H=1.971 pur=0.207 sim=0.320
+ep 12/150  tr@1=0.8783  tr@2=0.9561  tr@5=0.9950  te@1=0.8852 te@2=0.9580 te@5=0.9935  dr~0.000 util~1.000  es=12  spec_H=1.968 pur=0.200 sim=0.299
+ep 13/150  tr@1=0.8856  tr@2=0.9578  tr@5=0.9954  te@1=0.8765 te@2=0.9532 te@5=0.9934  dr~0.000 util~1.000  es=11  spec_H=1.979 pur=0.201 sim=0.291
+ep 14/150  tr@1=0.8918  tr@2=0.9606  tr@5=0.9955  te@1=0.8849 te@2=0.9604 te@5=0.9958  dr~0.000 util~1.000  es=10  spec_H=1.956 pur=0.203 sim=0.311
+ep 15/150  tr@1=0.8988  tr@2=0.9646  tr@5=0.9960  te@1=0.8854 te@2=0.9608 te@5=0.9943  dr~0.000 util~1.000  es=9  spec_H=1.980 pur=0.202 sim=0.329
+ep 16/150  tr@1=0.9028  tr@2=0.9667  tr@5=0.9967  te@1=0.8736 te@2=0.9566 te@5=0.9956  dr~0.000 util~1.000  es=8  spec_H=1.970 pur=0.204 sim=0.327
+ep 17/150  tr@1=0.9084  tr@2=0.9686  tr@5=0.9966  te@1=0.8901 te@2=0.9645 te@5=0.9977  dr~0.000 util~1.000  es=12  spec_H=1.941 pur=0.212 sim=0.313
+ep 18/150  tr@1=0.9113  tr@2=0.9710  tr@5=0.9968  te@1=0.9052 te@2=0.9686 te@5=0.9970  dr~0.000 util~1.000  es=12  spec_H=1.944 pur=0.214 sim=0.337
+ep 19/150  tr@1=0.9171  tr@2=0.9735  tr@5=0.9971  te@1=0.8997 te@2=0.9651 te@5=0.9962  dr~0.000 util~1.000  es=11  spec_H=1.942 pur=0.204 sim=0.328
+ep 20/150  tr@1=0.9203  tr@2=0.9753  tr@5=0.9975  te@1=0.9026 te@2=0.9667 te@5=0.9966  dr~0.000 util~1.000  es=10  spec_H=1.960 pur=0.206 sim=0.328
+ep 21/150  tr@1=0.9240  tr@2=0.9761  tr@5=0.9973  te@1=0.9112 te@2=0.9716 te@5=0.9965  dr~0.000 util~1.000  es=12  spec_H=1.962 pur=0.202 sim=0.335
+ep 22/150  tr@1=0.9269  tr@2=0.9777  tr@5=0.9979  te@1=0.9095 te@2=0.9706 te@5=0.9971  dr~0.000 util~1.000  es=11  spec_H=1.952 pur=0.209 sim=0.337
+ep 23/150  tr@1=0.9304  tr@2=0.9788  tr@5=0.9979  te@1=0.9046 te@2=0.9686 te@5=0.9966  dr~0.000 util~1.000  es=10  spec_H=1.965 pur=0.203 sim=0.354
+ep 24/150  tr@1=0.9323  tr@2=0.9794  tr@5=0.9982  te@1=0.9086 te@2=0.9698 te@5=0.9969  dr~0.000 util~1.000  es=9  spec_H=1.979 pur=0.213 sim=0.365
+ep 25/150  tr@1=0.9350  tr@2=0.9803  tr@5=0.9982  te@1=0.9088 te@2=0.9690 te@5=0.9975  dr~0.000 util~1.000  es=8  spec_H=1.931 pur=0.219 sim=0.379
+ep 26/150  tr@1=0.9380  tr@2=0.9828  tr@5=0.9983  te@1=0.9170 te@2=0.9713 te@5=0.9976  dr~0.000 util~1.000  es=12  spec_H=1.953 pur=0.210 sim=0.381
+ep 27/150  tr@1=0.9408  tr@2=0.9839  tr@5=0.9984  te@1=0.9168 te@2=0.9739 te@5=0.9964  dr~0.000 util~1.000  es=11  spec_H=1.949 pur=0.205 sim=0.385
+ep 28/150  tr@1=0.9415  tr@2=0.9842  tr@5=0.9988  te@1=0.9133 te@2=0.9702 te@5=0.9961  dr~0.000 util~1.000  es=10  spec_H=1.941 pur=0.206 sim=0.389
+ep 29/150  tr@1=0.9439  tr@2=0.9849  tr@5=0.9985  te@1=0.9156 te@2=0.9733 te@5=0.9968  dr~0.000 util~1.000  es=9  spec_H=1.936 pur=0.205 sim=0.394
+ep 30/150  tr@1=0.9458  tr@2=0.9858  tr@5=0.9987  te@1=0.9180 te@2=0.9753 te@5=0.9968  dr~0.000 util~1.000  es=8  spec_H=1.951 pur=0.211 sim=0.414
+ep 31/150  tr@1=0.9476  tr@2=0.9852  tr@5=0.9988  te@1=0.9175 te@2=0.9731 te@5=0.9975  dr~0.000 util~1.000  es=7  spec_H=1.941 pur=0.212 sim=0.425
+ep 32/150  tr@1=0.9501  tr@2=0.9867  tr@5=0.9990  te@1=0.9180 te@2=0.9724 te@5=0.9961  dr~0.000 util~1.000  es=6  spec_H=1.923 pur=0.220 sim=0.420
+ep 33/150  tr@1=0.9495  tr@2=0.9871  tr@5=0.9987  te@1=0.9183 te@2=0.9734 te@5=0.9969  dr~0.000 util~1.000  es=12  spec_H=1.949 pur=0.201 sim=0.421
+ep 34/150  tr@1=0.9512  tr@2=0.9865  tr@5=0.9987  te@1=0.9163 te@2=0.9739 te@5=0.9970  dr~0.000 util~1.000  es=11  spec_H=1.935 pur=0.205 sim=0.424
+ep 35/150  tr@1=0.9529  tr@2=0.9873  tr@5=0.9990  te@1=0.9185 te@2=0.9746 te@5=0.9962  dr~0.000 util~1.000  es=10  spec_H=1.939 pur=0.208 sim=0.434
+ep 36/150  tr@1=0.9543  tr@2=0.9886  tr@5=0.9989  te@1=0.9116 te@2=0.9707 te@5=0.9958  dr~0.000 util~1.000  es=9  spec_H=1.951 pur=0.197 sim=0.430
+ep 37/150  tr@1=0.9551  tr@2=0.9887  tr@5=0.9990  te@1=0.9179 te@2=0.9740 te@5=0.9956  dr~0.000 util~1.000  es=8  spec_H=1.938 pur=0.206 sim=0.435
+ep 38/150  tr@1=0.9576  tr@2=0.9901  tr@5=0.9990  te@1=0.9168 te@2=0.9731 te@5=0.9966  dr~0.000 util~1.000  es=7  spec_H=1.943 pur=0.208 sim=0.442
+ep 39/150  tr@1=0.9585  tr@2=0.9895  tr@5=0.9993  te@1=0.9188 te@2=0.9728 te@5=0.9970  dr~0.000 util~1.000  es=6  spec_H=1.935 pur=0.211 sim=0.444
+ep 40/150  tr@1=0.9575  tr@2=0.9900  tr@5=0.9991  te@1=0.9228 te@2=0.9759 te@5=0.9968  dr~0.000 util~1.000  es=12  spec_H=1.951 pur=0.202 sim=0.439
+ep 41/150  tr@1=0.9609  tr@2=0.9902  tr@5=0.9992  te@1=0.9211 te@2=0.9753 te@5=0.9968  dr~0.000 util~1.000  es=11  spec_H=1.929 pur=0.205 sim=0.450
+ep 42/150  tr@1=0.9612  tr@2=0.9904  tr@5=0.9993  te@1=0.9293 te@2=0.9768 te@5=0.9969  dr~0.000 util~1.000  es=12  spec_H=1.946 pur=0.198 sim=0.455
+ep 43/150  tr@1=0.9629  tr@2=0.9914  tr@5=0.9992  te@1=0.9215 te@2=0.9736 te@5=0.9958  dr~0.000 util~1.000  es=11  spec_H=1.938 pur=0.204 sim=0.455
+ep 44/150  tr@1=0.9633  tr@2=0.9916  tr@5=0.9993  te@1=0.9287 te@2=0.9766 te@5=0.9961  dr~0.000 util~1.000  es=10  spec_H=1.924 pur=0.207 sim=0.453
+ep 45/150  tr@1=0.9629  tr@2=0.9913  tr@5=0.9992  te@1=0.9196 te@2=0.9734 te@5=0.9960  dr~0.000 util~1.000  es=9  spec_H=1.933 pur=0.206 sim=0.465
+ep 46/150  tr@1=0.9649  tr@2=0.9919  tr@5=0.9994  te@1=0.9244 te@2=0.9761 te@5=0.9957  dr~0.000 util~1.000  es=8  spec_H=1.959 pur=0.207 sim=0.468
+ep 47/150  tr@1=0.9654  tr@2=0.9925  tr@5=0.9992  te@1=0.9209 te@2=0.9754 te@5=0.9969  dr~0.000 util~1.000  es=7  spec_H=1.944 pur=0.211 sim=0.468
+ep 48/150  tr@1=0.9655  tr@2=0.9920  tr@5=0.9994  te@1=0.9231 te@2=0.9758 te@5=0.9970  dr~0.000 util~1.000  es=6  spec_H=1.939 pur=0.203 sim=0.475
+ep 49/150  tr@1=0.9668  tr@2=0.9928  tr@5=0.9993  te@1=0.9203 te@2=0.9737 te@5=0.9954  dr~0.000 util~1.000  es=5  spec_H=1.965 pur=0.205 sim=0.477
+ep 50/150  tr@1=0.9682  tr@2=0.9927  tr@5=0.9993  te@1=0.9180 te@2=0.9719 te@5=0.9954  dr~0.000 util~1.000  es=4  spec_H=1.943 pur=0.206 sim=0.477
+ep 51/150  tr@1=0.9685  tr@2=0.9930  tr@5=0.9995  te@1=0.9245 te@2=0.9743 te@5=0.9955  dr~0.000 util~1.000  es=3  spec_H=1.935 pur=0.211 sim=0.476
+ep 52/150  tr@1=0.9683  tr@2=0.9930  tr@5=0.9994  te@1=0.9298 te@2=0.9762 te@5=0.9951  dr~0.000 util~1.000  es=2  spec_H=1.960 pur=0.211 sim=0.479
+ep 53/150  tr@1=0.9701  tr@2=0.9937  tr@5=0.9994  te@1=0.9288 te@2=0.9755 te@5=0.9958  dr~0.000 util~1.000  es=1  spec_H=1.950 pur=0.207 sim=0.483
+ep 54/150  tr@1=0.9712  tr@2=0.9935  tr@5=0.9993  te@1=0.9288 te@2=0.9744 te@5=0.9960  dr~0.000 util~1.000  es=0  spec_H=1.938 pur=0.206 sim=0.474
+early stop: eval top1 برای 12 اپوک بهبود نداشت (best=0.9293, min_delta=0.001)
+[log] جزئیات اپوک best (ep=42, te@1=0.9293) → A1_42.json
+[checkpoint] بهترین مدل ذخیره شد: checkpoints/A1_42.pt (test_top1=0.9293)
+########################################################################
+# run end: 2026-08-13 08:45:19
+########################################################################

@@ -1,0 +1,117 @@
+
+########################################################################
+# run start: 2026-08-29 10:30:29
+########################################################################
+[console-log] خروجی کنسول در فایل ذخیره می‌شود: moe_mnist_41_console.log
+========================================================================
+{
+  "moe": {
+    "num_experts": 4,
+    "top_k": 2,
+    "expert_hidden": 384,
+    "expert_dropout": 0.1,
+    "router_temperature": 1.0,
+    "router_noise_std": 0.01,
+    "router_detach_for_topk": false,
+    "combine_method": "softmax",
+    "capacity_factor": 2,
+    "moe_residual_scale": 1.0,
+    "use_load_balance": true,
+    "load_balance_coef": 0.0001,
+    "use_z_loss": true,
+    "z_loss_coef": 0.0001,
+    "use_router_entropy_aux": false,
+    "router_entropy_coef": 0.0
+  },
+  "num_classes": 10,
+  "dim": 256,
+  "moe_num_layers": 2,
+  "batch_size": 128,
+  "epochs": 80,
+  "lr": 0.0012,
+  "weight_decay": 0.05,
+  "adam_betas": [
+    0.9,
+    0.98
+  ],
+  "adam_eps": 0.0,
+  "seed": 41,
+  "num_workers": 0,
+  "device": "cuda",
+  "data_dir": "./data",
+  "in_channels": 1,
+  "image_size": 32,
+  "train_random_crop_pad": 2,
+  "train_hflip": false,
+  "train_randaugment_ops": 0,
+  "train_randaugment_magnitude": 4,
+  "train_label_smoothing": 0.0,
+  "log_json": "moe_mnist_41.json",
+  "log_console": null,
+  "log_json_float_decimals": 4,
+  "checkpoint_path": null,
+  "checkpoint_dir": "checkpoints",
+  "checkpoint_filename": "moe_mnist_41.pt",
+  "training_checkpoint_path": null,
+  "resume_training_path": null,
+  "early_stop_patience": 12,
+  "early_stop_min_delta": 0.0005,
+  "lr_warmup_epochs": 5,
+  "lr_min": 0.0,
+  "spec_metric_enabled": true,
+  "spec_ablation_max_batches": 30,
+  "use_hybrid_spatial_moe": true,
+  "spatial_moe": {
+    "num_experts": 4,
+    "top_k": 2,
+    "expert_hidden": 384,
+    "expert_dropout": 0.1,
+    "router_temperature": 1.0,
+    "router_noise_std": 0.01,
+    "router_detach_for_topk": false,
+    "combine_method": "softmax",
+    "capacity_factor": 2,
+    "moe_residual_scale": 1.0,
+    "use_load_balance": true,
+    "load_balance_coef": 0.0001,
+    "use_z_loss": true,
+    "z_loss_coef": 0.0001,
+    "use_router_entropy_aux": false,
+    "router_entropy_coef": 0.0
+  },
+  "moe_num_spatial_layers": 1,
+  "moe_num_global_layers": 1,
+  "use_spatial_pos_embed": true,
+  "feature_channels": 256
+}
+========================================================================
+ep 1/80  tr@1=0.9582  tr@2=0.9812  tr@5=0.9946  te@1=0.9797 te@2=0.9952 te@5=0.9999  dr~0.000 util~1.000  es=12  spec_H=2.049 pur=0.183 sim=0.350
+ep 2/80  tr@1=0.9841  tr@2=0.9965  tr@5=0.9999  te@1=0.9739 te@2=0.9925 te@5=0.9998  dr~0.000 util~1.000  es=11  spec_H=2.069 pur=0.184 sim=0.214
+ep 3/80  tr@1=0.9869  tr@2=0.9973  tr@5=0.9999  te@1=0.9853 te@2=0.9976 te@5=1.0000  dr~0.000 util~1.000  es=12  spec_H=1.969 pur=0.196 sim=0.194
+ep 4/80  tr@1=0.9870  tr@2=0.9976  tr@5=0.9999  te@1=0.9906 te@2=0.9975 te@5=1.0000  dr~0.000 util~1.000  es=12  spec_H=2.016 pur=0.183 sim=0.229
+ep 5/80  tr@1=0.9889  tr@2=0.9980  tr@5=0.9999  te@1=0.9877 te@2=0.9980 te@5=0.9998  dr~0.000 util~1.000  es=11  spec_H=2.003 pur=0.191 sim=0.236
+ep 6/80  tr@1=0.9897  tr@2=0.9980  tr@5=0.9999  te@1=0.9905 te@2=0.9985 te@5=1.0000  dr~0.000 util~1.000  es=10  spec_H=1.895 pur=0.259 sim=0.332
+ep 7/80  tr@1=0.9908  tr@2=0.9985  tr@5=1.0000  te@1=0.9930 te@2=0.9988 te@5=1.0000  dr~0.000 util~1.000  es=12  spec_H=1.950 pur=0.235 sim=0.332
+ep 8/80  tr@1=0.9923  tr@2=0.9987  tr@5=1.0000  te@1=0.9908 te@2=0.9990 te@5=0.9999  dr~0.000 util~1.000  es=11  spec_H=1.854 pur=0.267 sim=0.378
+ep 9/80  tr@1=0.9933  tr@2=0.9987  tr@5=0.9999  te@1=0.9874 te@2=0.9985 te@5=1.0000  dr~0.000 util~1.000  es=10  spec_H=1.844 pur=0.266 sim=0.422
+ep 10/80  tr@1=0.9936  tr@2=0.9991  tr@5=1.0000  te@1=0.9922 te@2=0.9985 te@5=1.0000  dr~0.000 util~1.000  es=9  spec_H=1.951 pur=0.206 sim=0.433
+ep 11/80  tr@1=0.9942  tr@2=0.9992  tr@5=1.0000  te@1=0.9937 te@2=0.9988 te@5=1.0000  dr~0.000 util~1.000  es=12  spec_H=1.939 pur=0.223 sim=0.435
+ep 12/80  tr@1=0.9949  tr@2=0.9993  tr@5=1.0000  te@1=0.9952 te@2=0.9990 te@5=1.0000  dr~0.000 util~1.000  es=12  spec_H=1.973 pur=0.205 sim=0.454
+ep 13/80  tr@1=0.9946  tr@2=0.9994  tr@5=1.0000  te@1=0.9942 te@2=0.9993 te@5=1.0000  dr~0.000 util~1.000  es=11  spec_H=1.958 pur=0.207 sim=0.440
+ep 14/80  tr@1=0.9954  tr@2=0.9995  tr@5=1.0000  te@1=0.9949 te@2=0.9996 te@5=1.0000  dr~0.000 util~1.000  es=10  spec_H=1.943 pur=0.212 sim=0.485
+ep 15/80  tr@1=0.9953  tr@2=0.9995  tr@5=1.0000  te@1=0.9944 te@2=0.9997 te@5=1.0000  dr~0.000 util~1.000  es=9  spec_H=1.850 pur=0.262 sim=0.520
+ep 16/80  tr@1=0.9963  tr@2=0.9997  tr@5=1.0000  te@1=0.9953 te@2=0.9997 te@5=1.0000  dr~0.000 util~1.000  es=8  spec_H=1.889 pur=0.258 sim=0.485
+ep 17/80  tr@1=0.9963  tr@2=0.9996  tr@5=1.0000  te@1=0.9926 te@2=0.9989 te@5=1.0000  dr~0.000 util~1.000  es=7  spec_H=1.941 pur=0.206 sim=0.511
+ep 18/80  tr@1=0.9962  tr@2=0.9996  tr@5=1.0000  te@1=0.9942 te@2=0.9992 te@5=1.0000  dr~0.000 util~1.000  es=6  spec_H=1.899 pur=0.219 sim=0.520
+ep 19/80  tr@1=0.9966  tr@2=0.9997  tr@5=1.0000  te@1=0.9913 te@2=0.9990 te@5=1.0000  dr~0.000 util~1.000  es=5  spec_H=1.943 pur=0.207 sim=0.557
+ep 20/80  tr@1=0.9966  tr@2=0.9999  tr@5=1.0000  te@1=0.9926 te@2=0.9994 te@5=1.0000  dr~0.000 util~1.000  es=4  spec_H=1.930 pur=0.220 sim=0.579
+ep 21/80  tr@1=0.9970  tr@2=0.9998  tr@5=1.0000  te@1=0.9955 te@2=0.9997 te@5=1.0000  dr~0.000 util~1.000  es=3  spec_H=1.952 pur=0.238 sim=0.591
+ep 22/80  tr@1=0.9969  tr@2=0.9997  tr@5=1.0000  te@1=0.9928 te@2=0.9993 te@5=1.0000  dr~0.000 util~1.000  es=2  spec_H=1.845 pur=0.261 sim=0.593
+ep 23/80  tr@1=0.9972  tr@2=0.9998  tr@5=1.0000  te@1=0.9939 te@2=0.9990 te@5=0.9999  dr~0.000 util~1.000  es=1  spec_H=1.916 pur=0.209 sim=0.557
+ep 24/80  tr@1=0.9975  tr@2=0.9998  tr@5=1.0000  te@1=0.9937 te@2=0.9994 te@5=1.0000  dr~0.000 util~1.000  es=0  spec_H=1.926 pur=0.209 sim=0.564
+early stop: eval top1 برای 12 اپوک بهبود نداشت (best=0.9952, min_delta=0.0005)
+[log] جزئیات اپوک best (ep=12, te@1=0.9952) → moe_mnist_41.json
+[checkpoint] بهترین مدل ذخیره شد: checkpoints/moe_mnist_41.pt (test_top1=0.9952)
+########################################################################
+# run end: 2026-08-29 11:09:56
+########################################################################

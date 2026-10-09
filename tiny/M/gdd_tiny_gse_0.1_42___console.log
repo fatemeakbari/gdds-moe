@@ -1,0 +1,365 @@
+
+########################################################################
+# run start: 2026-10-17 09:17:49
+########################################################################
+[console-log] خروجی کنسول در فایل ذخیره می‌شود: gdd_tiny_gse_0.1_42___console.log
+========================================================================
+{
+  "moe": {
+    "num_experts": 16,
+    "top_k": 2,
+    "expert_hidden": 512,
+    "expert_dropout": 0.2,
+    "router_temperature": 1.0,
+    "router_noise_std": 0.02,
+    "router_detach_for_topk": false,
+    "combine_method": "softmax",
+    "capacity_factor": 2,
+    "moe_residual_scale": 1.0,
+    "use_load_balance": true,
+    "load_balance_coef": 0.0,
+    "use_z_loss": true,
+    "z_loss_coef": 0.0001,
+    "use_router_entropy_aux": false,
+    "router_entropy_coef": 0.0
+  },
+  "num_classes": 200,
+  "image_size": 64,
+  "dim": 384,
+  "moe_num_layers": 2,
+  "batch_size": 64,
+  "epochs": 400,
+  "lr": 0.0012,
+  "weight_decay": 0.05,
+  "adam_betas": [
+    0.9,
+    0.98
+  ],
+  "adam_eps": 0.0,
+  "seed": 42,
+  "num_workers": 0,
+  "device": "cuda",
+  "data_dir": "./data",
+  "local_tiny_imagenet": "tiny-imagenet-200.zip",
+  "train_random_crop_pad": 8,
+  "train_hflip": true,
+  "train_randaugment_ops": 2,
+  "train_randaugment_magnitude": 4,
+  "train_label_smoothing": 0.1,
+  "log_json": "gdd_tiny_gse_0.1_42__.json",
+  "log_console": null,
+  "log_json_float_decimals": 4,
+  "checkpoint_path": null,
+  "checkpoint_dir": "checkpoints",
+  "checkpoint_filename": "gdd_tiny_gse_0.1_42__.pt",
+  "training_checkpoint_path": null,
+  "resume_training_path": null,
+  "early_stop_patience": 12,
+  "early_stop_min_delta": 0.0001,
+  "lr_warmup_epochs": 5,
+  "lr_min": 0.0,
+  "spec_metric_enabled": true,
+  "spec_ablation_max_batches": 50,
+  "use_grad_div": true,
+  "grad_div_coef": 0.1,
+  "grad_div_global_only": true,
+  "grad_div_spatial_only": true,
+  "grad_div_max_tokens": 128,
+  "use_router_div": false,
+  "router_div_coef": 0.003,
+  "router_div_max_tokens": 256,
+  "use_router_grad_div": false,
+  "router_grad_div_coef": 0.001,
+  "router_grad_div_max_tokens": 256,
+  "router_grad_div_global_only": true,
+  "router_grad_div_detach_upstream": true,
+  "router_grad_div_detach_sim": true,
+  "use_hybrid_spatial_moe": true,
+  "spatial_moe": {
+    "num_experts": 16,
+    "top_k": 2,
+    "expert_hidden": 512,
+    "expert_dropout": 0.2,
+    "router_temperature": 1.0,
+    "router_noise_std": 0.02,
+    "router_detach_for_topk": false,
+    "combine_method": "softmax",
+    "capacity_factor": 2,
+    "moe_residual_scale": 1.0,
+    "use_load_balance": true,
+    "load_balance_coef": 0.0,
+    "use_z_loss": true,
+    "z_loss_coef": 0.0001,
+    "use_router_entropy_aux": false,
+    "router_entropy_coef": 0.0
+  },
+  "moe_num_spatial_layers": 1,
+  "moe_num_global_layers": 1,
+  "use_spatial_pos_embed": true,
+  "feature_channels": 384,
+  "backbone_stage3_depth": 3
+}
+========================================================================
+########################################################################
+# run end: 2026-10-17 09:21:38
+########################################################################
+
+########################################################################
+# run start: 2026-10-17 09:21:42
+########################################################################
+[console-log] خروجی کنسول در فایل ذخیره می‌شود: gdd_tiny_gse_0.1_42___console.log
+========================================================================
+{
+  "moe": {
+    "num_experts": 16,
+    "top_k": 2,
+    "expert_hidden": 512,
+    "expert_dropout": 0.2,
+    "router_temperature": 1.0,
+    "router_noise_std": 0.02,
+    "router_detach_for_topk": false,
+    "combine_method": "softmax",
+    "capacity_factor": 2,
+    "moe_residual_scale": 1.0,
+    "use_load_balance": true,
+    "load_balance_coef": 0.0,
+    "use_z_loss": true,
+    "z_loss_coef": 0.0001,
+    "use_router_entropy_aux": false,
+    "router_entropy_coef": 0.0
+  },
+  "num_classes": 200,
+  "image_size": 64,
+  "dim": 384,
+  "moe_num_layers": 2,
+  "batch_size": 256,
+  "epochs": 400,
+  "lr": 0.0012,
+  "weight_decay": 0.05,
+  "adam_betas": [
+    0.9,
+    0.98
+  ],
+  "adam_eps": 0.0,
+  "seed": 42,
+  "num_workers": 0,
+  "device": "cuda",
+  "data_dir": "./data",
+  "local_tiny_imagenet": "tiny-imagenet-200.zip",
+  "train_random_crop_pad": 8,
+  "train_hflip": true,
+  "train_randaugment_ops": 2,
+  "train_randaugment_magnitude": 4,
+  "train_label_smoothing": 0.1,
+  "log_json": "gdd_tiny_gse_0.1_42__.json",
+  "log_console": null,
+  "log_json_float_decimals": 4,
+  "checkpoint_path": null,
+  "checkpoint_dir": "checkpoints",
+  "checkpoint_filename": "gdd_tiny_gse_0.1_42__.pt",
+  "training_checkpoint_path": null,
+  "resume_training_path": null,
+  "early_stop_patience": 12,
+  "early_stop_min_delta": 0.0001,
+  "lr_warmup_epochs": 5,
+  "lr_min": 0.0,
+  "spec_metric_enabled": true,
+  "spec_ablation_max_batches": 50,
+  "use_grad_div": true,
+  "grad_div_coef": 0.1,
+  "grad_div_global_only": true,
+  "grad_div_spatial_only": true,
+  "grad_div_max_tokens": 128,
+  "use_router_div": false,
+  "router_div_coef": 0.003,
+  "router_div_max_tokens": 256,
+  "use_router_grad_div": false,
+  "router_grad_div_coef": 0.001,
+  "router_grad_div_max_tokens": 256,
+  "router_grad_div_global_only": true,
+  "router_grad_div_detach_upstream": true,
+  "router_grad_div_detach_sim": true,
+  "use_hybrid_spatial_moe": true,
+  "spatial_moe": {
+    "num_experts": 16,
+    "top_k": 2,
+    "expert_hidden": 512,
+    "expert_dropout": 0.2,
+    "router_temperature": 1.0,
+    "router_noise_std": 0.02,
+    "router_detach_for_topk": false,
+    "combine_method": "softmax",
+    "capacity_factor": 2,
+    "moe_residual_scale": 1.0,
+    "use_load_balance": true,
+    "load_balance_coef": 0.0,
+    "use_z_loss": true,
+    "z_loss_coef": 0.0001,
+    "use_router_entropy_aux": false,
+    "router_entropy_coef": 0.0
+  },
+  "moe_num_spatial_layers": 1,
+  "moe_num_global_layers": 1,
+  "use_spatial_pos_embed": true,
+  "feature_channels": 384,
+  "backbone_stage3_depth": 3
+}
+========================================================================
+########################################################################
+# run end: 2026-10-17 09:23:02
+########################################################################
+
+########################################################################
+# run start: 2026-10-17 09:24:00
+########################################################################
+[console-log] خروجی کنسول در فایل ذخیره می‌شود: gdd_tiny_gse_0.1_42___console.log
+========================================================================
+{
+  "moe": {
+    "num_experts": 16,
+    "top_k": 2,
+    "expert_hidden": 512,
+    "expert_dropout": 0.2,
+    "router_temperature": 1.0,
+    "router_noise_std": 0.02,
+    "router_detach_for_topk": false,
+    "combine_method": "softmax",
+    "capacity_factor": 2,
+    "moe_residual_scale": 1.0,
+    "use_load_balance": true,
+    "load_balance_coef": 0.0,
+    "use_z_loss": true,
+    "z_loss_coef": 0.0001,
+    "use_router_entropy_aux": false,
+    "router_entropy_coef": 0.0
+  },
+  "num_classes": 200,
+  "image_size": 64,
+  "dim": 384,
+  "moe_num_layers": 2,
+  "batch_size": 128,
+  "epochs": 400,
+  "lr": 0.0012,
+  "weight_decay": 0.05,
+  "adam_betas": [
+    0.9,
+    0.98
+  ],
+  "adam_eps": 0.0,
+  "seed": 42,
+  "num_workers": 0,
+  "device": "cuda",
+  "data_dir": "./data",
+  "local_tiny_imagenet": "tiny-imagenet-200.zip",
+  "train_random_crop_pad": 8,
+  "train_hflip": true,
+  "train_randaugment_ops": 2,
+  "train_randaugment_magnitude": 4,
+  "train_label_smoothing": 0.1,
+  "log_json": "gdd_tiny_gse_0.1_42__.json",
+  "log_console": null,
+  "log_json_float_decimals": 4,
+  "checkpoint_path": null,
+  "checkpoint_dir": "checkpoints",
+  "checkpoint_filename": "gdd_tiny_gse_0.1_42__.pt",
+  "training_checkpoint_path": null,
+  "resume_training_path": null,
+  "early_stop_patience": 12,
+  "early_stop_min_delta": 0.0001,
+  "lr_warmup_epochs": 5,
+  "lr_min": 0.0,
+  "spec_metric_enabled": true,
+  "spec_ablation_max_batches": 50,
+  "use_grad_div": true,
+  "grad_div_coef": 0.1,
+  "grad_div_global_only": true,
+  "grad_div_spatial_only": true,
+  "grad_div_max_tokens": 128,
+  "use_router_div": false,
+  "router_div_coef": 0.003,
+  "router_div_max_tokens": 256,
+  "use_router_grad_div": false,
+  "router_grad_div_coef": 0.001,
+  "router_grad_div_max_tokens": 256,
+  "router_grad_div_global_only": true,
+  "router_grad_div_detach_upstream": true,
+  "router_grad_div_detach_sim": true,
+  "use_hybrid_spatial_moe": true,
+  "spatial_moe": {
+    "num_experts": 16,
+    "top_k": 2,
+    "expert_hidden": 512,
+    "expert_dropout": 0.2,
+    "router_temperature": 1.0,
+    "router_noise_std": 0.02,
+    "router_detach_for_topk": false,
+    "combine_method": "softmax",
+    "capacity_factor": 2,
+    "moe_residual_scale": 1.0,
+    "use_load_balance": true,
+    "load_balance_coef": 0.0,
+    "use_z_loss": true,
+    "z_loss_coef": 0.0001,
+    "use_router_entropy_aux": false,
+    "router_entropy_coef": 0.0
+  },
+  "moe_num_spatial_layers": 1,
+  "moe_num_global_layers": 1,
+  "use_spatial_pos_embed": true,
+  "feature_channels": 384,
+  "backbone_stage3_depth": 3
+}
+========================================================================
+ep 1/400  tr@1=0.0946  tr@2=0.1527  tr@5=0.2634  te@1=0.1672 te@2=0.2492 te@5=0.3991  dr~0.002 util~0.998  es=12  spec_H=3.990 pur=0.036 sim=0.020
+ep 2/400  tr@1=0.1812  tr@2=0.2715  tr@5=0.4236  te@1=0.2118 te@2=0.3140 te@5=0.4732  dr~0.001 util~0.999  es=12  spec_H=4.298 pur=0.035 sim=-0.009
+ep 3/400  tr@1=0.2465  tr@2=0.3512  tr@5=0.5129  te@1=0.2501 te@2=0.3603 te@5=0.5241  dr~0.009 util~0.991  es=12  spec_H=4.278 pur=0.041 sim=-0.006
+ep 4/400  tr@1=0.2948  tr@2=0.4106  tr@5=0.5736  te@1=0.3162 te@2=0.4343 te@5=0.5999  dr~0.176 util~0.824  es=12  spec_H=4.042 pur=0.050 sim=0.002
+/root/venv/lib/python3.12/site-packages/torch/optim/lr_scheduler.py:243: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+ep 5/400  tr@1=0.3380  tr@2=0.4562  tr@5=0.6190  te@1=0.3414 te@2=0.4524 te@5=0.6134  dr~0.326 util~0.674  es=12  spec_H=4.006 pur=0.040 sim=0.013
+ep 6/400  tr@1=0.3699  tr@2=0.4926  tr@5=0.6534  te@1=0.3606 te@2=0.4831 te@5=0.6411  dr~0.289 util~0.711  es=12  spec_H=4.030 pur=0.037 sim=0.027
+ep 7/400  tr@1=0.4134  tr@2=0.5404  tr@5=0.6945  te@1=0.4076 te@2=0.5364 te@5=0.6971  dr~0.290 util~0.710  es=12  spec_H=3.928 pur=0.046 sim=0.038
+ep 8/400  tr@1=0.4518  tr@2=0.5786  tr@5=0.7281  te@1=0.4317 te@2=0.5558 te@5=0.7084  dr~0.339 util~0.661  es=12  spec_H=3.988 pur=0.042 sim=0.046
+ep 9/400  tr@1=0.4848  tr@2=0.6122  tr@5=0.7544  te@1=0.4585 te@2=0.5919 te@5=0.7321  dr~0.266 util~0.734  es=12  spec_H=3.969 pur=0.043 sim=0.049
+ep 10/400  tr@1=0.5102  tr@2=0.6380  tr@5=0.7776  te@1=0.4899 te@2=0.6180 te@5=0.7560  dr~0.240 util~0.760  es=12  spec_H=3.963 pur=0.046 sim=0.053
+ep 11/400  tr@1=0.5366  tr@2=0.6635  tr@5=0.7964  te@1=0.5104 te@2=0.6312 te@5=0.7696  dr~0.310 util~0.690  es=12  spec_H=3.926 pur=0.049 sim=0.059
+ep 12/400  tr@1=0.5602  tr@2=0.6858  tr@5=0.8151  te@1=0.4920 te@2=0.6196 te@5=0.7583  dr~0.241 util~0.759  es=11  spec_H=3.929 pur=0.048 sim=0.061
+ep 13/400  tr@1=0.5785  tr@2=0.7056  tr@5=0.8293  te@1=0.5335 te@2=0.6587 te@5=0.7855  dr~0.233 util~0.767  es=12  spec_H=3.946 pur=0.048 sim=0.064
+ep 14/400  tr@1=0.6004  tr@2=0.7247  tr@5=0.8434  te@1=0.5388 te@2=0.6594 te@5=0.7862  dr~0.297 util~0.703  es=12  spec_H=3.930 pur=0.046 sim=0.062
+ep 15/400  tr@1=0.6197  tr@2=0.7428  tr@5=0.8576  te@1=0.5377 te@2=0.6603 te@5=0.7904  dr~0.296 util~0.704  es=11  spec_H=3.912 pur=0.033 sim=0.066
+ep 16/400  tr@1=0.6369  tr@2=0.7587  tr@5=0.8696  te@1=0.5413 te@2=0.6647 te@5=0.7888  dr~0.277 util~0.723  es=12  spec_H=3.882 pur=0.036 sim=0.060
+ep 17/400  tr@1=0.6538  tr@2=0.7731  tr@5=0.8811  te@1=0.5442 te@2=0.6655 te@5=0.7895  dr~0.243 util~0.757  es=12  spec_H=3.875 pur=0.067 sim=0.058
+ep 18/400  tr@1=0.6700  tr@2=0.7881  tr@5=0.8909  te@1=0.5523 te@2=0.6728 te@5=0.7947  dr~0.324 util~0.676  es=12  spec_H=3.837 pur=0.042 sim=0.052
+ep 19/400  tr@1=0.6870  tr@2=0.8027  tr@5=0.9006  te@1=0.5597 te@2=0.6785 te@5=0.7967  dr~0.317 util~0.683  es=12  spec_H=3.806 pur=0.043 sim=0.048
+ep 20/400  tr@1=0.6996  tr@2=0.8133  tr@5=0.9081  te@1=0.5700 te@2=0.6914 te@5=0.8053  dr~0.310 util~0.690  es=12  spec_H=3.830 pur=0.041 sim=0.045
+ep 21/400  tr@1=0.7143  tr@2=0.8259  tr@5=0.9166  te@1=0.5584 te@2=0.6746 te@5=0.7916  dr~0.304 util~0.696  es=11  spec_H=3.816 pur=0.043 sim=0.046
+ep 22/400  tr@1=0.7251  tr@2=0.8369  tr@5=0.9242  te@1=0.5625 te@2=0.6735 te@5=0.7977  dr~0.342 util~0.658  es=10  spec_H=3.824 pur=0.043 sim=0.046
+ep 23/400  tr@1=0.7388  tr@2=0.8465  tr@5=0.9299  te@1=0.5731 te@2=0.6892 te@5=0.8032  dr~0.303 util~0.697  es=12  spec_H=3.795 pur=0.042 sim=0.046
+ep 24/400  tr@1=0.7486  tr@2=0.8544  tr@5=0.9352  te@1=0.5660 te@2=0.6813 te@5=0.7982  dr~0.316 util~0.684  es=11  spec_H=3.916 pur=0.042 sim=0.046
+ep 25/400  tr@1=0.7599  tr@2=0.8631  tr@5=0.9407  te@1=0.5633 te@2=0.6811 te@5=0.8024  dr~0.336 util~0.664  es=10  spec_H=3.782 pur=0.105 sim=0.047
+ep 26/400  tr@1=0.7690  tr@2=0.8726  tr@5=0.9461  te@1=0.5732 te@2=0.6913 te@5=0.8034  dr~0.344 util~0.656  es=9  spec_H=3.796 pur=0.128 sim=0.048
+ep 27/400  tr@1=0.7798  tr@2=0.8811  tr@5=0.9511  te@1=0.5710 te@2=0.6807 te@5=0.7920  dr~0.304 util~0.696  es=8  spec_H=3.848 pur=0.109 sim=0.044
+ep 28/400  tr@1=0.7856  tr@2=0.8859  tr@5=0.9533  te@1=0.5595 te@2=0.6764 te@5=0.7917  dr~0.305 util~0.695  es=7  spec_H=3.780 pur=0.048 sim=0.045
+ep 29/400  tr@1=0.7939  tr@2=0.8909  tr@5=0.9567  te@1=0.5646 te@2=0.6741 te@5=0.7860  dr~0.341 util~0.659  es=6  spec_H=3.800 pur=0.044 sim=0.044
+ep 30/400  tr@1=0.8014  tr@2=0.8967  tr@5=0.9602  te@1=0.5669 te@2=0.6765 te@5=0.7937  dr~0.328 util~0.672  es=5  spec_H=3.765 pur=0.080 sim=0.046
+ep 31/400  tr@1=0.8073  tr@2=0.9012  tr@5=0.9621  te@1=0.5657 te@2=0.6790 te@5=0.7934  dr~0.334 util~0.666  es=4  spec_H=3.913 pur=0.133 sim=0.046
+ep 32/400  tr@1=0.8127  tr@2=0.9052  tr@5=0.9639  te@1=0.5631 te@2=0.6777 te@5=0.7918  dr~0.368 util~0.632  es=3  spec_H=3.732 pur=0.098 sim=0.045
+ep 33/400  tr@1=0.8175  tr@2=0.9098  tr@5=0.9661  te@1=0.5740 te@2=0.6856 te@5=0.7947  dr~0.319 util~0.681  es=12  spec_H=3.664 pur=0.118 sim=0.043
+ep 34/400  tr@1=0.8228  tr@2=0.9126  tr@5=0.9675  te@1=0.5654 te@2=0.6733 te@5=0.7871  dr~0.325 util~0.675  es=11  spec_H=3.796 pur=0.140 sim=0.048
+ep 35/400  tr@1=0.8268  tr@2=0.9164  tr@5=0.9693  te@1=0.5658 te@2=0.6835 te@5=0.7940  dr~0.330 util~0.670  es=10  spec_H=3.698 pur=0.124 sim=0.046
+ep 36/400  tr@1=0.8293  tr@2=0.9172  tr@5=0.9706  te@1=0.5631 te@2=0.6757 te@5=0.7898  dr~0.331 util~0.669  es=9  spec_H=3.836 pur=0.131 sim=0.048
+ep 37/400  tr@1=0.8331  tr@2=0.9202  tr@5=0.9721  te@1=0.5712 te@2=0.6828 te@5=0.7923  dr~0.350 util~0.650  es=8  spec_H=3.676 pur=0.204 sim=0.047
+ep 38/400  tr@1=0.8374  tr@2=0.9230  tr@5=0.9726  te@1=0.5677 te@2=0.6828 te@5=0.7896  dr~0.329 util~0.671  es=7  spec_H=3.798 pur=0.066 sim=0.051
+ep 39/400  tr@1=0.8406  tr@2=0.9249  tr@5=0.9743  te@1=0.5641 te@2=0.6771 te@5=0.7905  dr~0.316 util~0.684  es=6  spec_H=3.927 pur=0.100 sim=0.045
+ep 40/400  tr@1=0.8449  tr@2=0.9268  tr@5=0.9760  te@1=0.5579 te@2=0.6716 te@5=0.7853  dr~0.332 util~0.668  es=5  spec_H=3.815 pur=0.165 sim=0.047
+ep 41/400  tr@1=0.8478  tr@2=0.9288  tr@5=0.9762  te@1=0.5676 te@2=0.6824 te@5=0.7933  dr~0.333 util~0.667  es=4  spec_H=3.748 pur=0.088 sim=0.046
+ep 42/400  tr@1=0.8496  tr@2=0.9309  tr@5=0.9770  te@1=0.5682 te@2=0.6770 te@5=0.7886  dr~0.322 util~0.678  es=3  spec_H=3.752 pur=0.080 sim=0.046
+ep 43/400  tr@1=0.8509  tr@2=0.9312  tr@5=0.9774  te@1=0.5704 te@2=0.6809 te@5=0.7933  dr~0.346 util~0.654  es=2  spec_H=3.801 pur=0.074 sim=0.048
+ep 44/400  tr@1=0.8530  tr@2=0.9330  tr@5=0.9785  te@1=0.5682 te@2=0.6813 te@5=0.7861  dr~0.316 util~0.684  es=1  spec_H=3.742 pur=0.082 sim=0.049
+ep 45/400  tr@1=0.8567  tr@2=0.9349  tr@5=0.9780  te@1=0.5728 te@2=0.6789 te@5=0.7872  dr~0.309 util~0.691  es=0  spec_H=3.828 pur=0.113 sim=0.048
+early stop: eval top1 برای 12 اپوک بهبود نداشت (best=0.5740, min_delta=0.0001)
+[log] آخرین جزئیات اپوک best روی دیسک: ep=33, te@1=0.5740 → gdd_tiny_gse_0.1_42__.json
+[checkpoint] بهترین مدل ذخیره شد: checkpoints/gdd_tiny_gse_0.1_42__.pt (test_top1=0.5740)
+########################################################################
+# run end: 2026-10-17 23:21:47
+########################################################################

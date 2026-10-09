@@ -1,0 +1,167 @@
+
+########################################################################
+# run start: 2026-10-18 05:00:45
+########################################################################
+[console-log] خروجی کنسول در فایل ذخیره می‌شود: M_tiny_41_console.log
+========================================================================
+{
+  "moe": {
+    "num_experts": 16,
+    "top_k": 2,
+    "expert_hidden": 512,
+    "expert_dropout": 0.2,
+    "router_temperature": 1.0,
+    "router_noise_std": 0.02,
+    "router_detach_for_topk": false,
+    "combine_method": "softmax",
+    "capacity_factor": 2,
+    "moe_residual_scale": 1.0,
+    "use_load_balance": true,
+    "load_balance_coef": 0.0001,
+    "use_z_loss": true,
+    "z_loss_coef": 0.0001,
+    "use_router_entropy_aux": false,
+    "router_entropy_coef": 0.0
+  },
+  "num_classes": 200,
+  "image_size": 64,
+  "dim": 384,
+  "moe_num_layers": 2,
+  "batch_size": 128,
+  "epochs": 400,
+  "lr": 0.0012,
+  "weight_decay": 0.05,
+  "adam_betas": [
+    0.9,
+    0.98
+  ],
+  "adam_eps": 0.0,
+  "seed": 41,
+  "num_workers": 0,
+  "device": "cuda",
+  "data_dir": "./data",
+  "local_tiny_imagenet": "tiny-imagenet-200.zip",
+  "train_random_crop_pad": 8,
+  "train_hflip": true,
+  "train_randaugment_ops": 2,
+  "train_randaugment_magnitude": 4,
+  "train_label_smoothing": 0.1,
+  "log_json": "M_tiny_41.json",
+  "log_console": null,
+  "log_json_float_decimals": 4,
+  "checkpoint_path": null,
+  "checkpoint_dir": "checkpoints",
+  "checkpoint_filename": "M_tiny_41.pt",
+  "training_checkpoint_path": null,
+  "resume_training_path": null,
+  "early_stop_patience": 12,
+  "early_stop_min_delta": 0.0001,
+  "lr_warmup_epochs": 5,
+  "lr_min": 0.0,
+  "spec_metric_enabled": true,
+  "spec_ablation_max_batches": 50,
+  "use_grad_div": true,
+  "grad_div_coef": 0.1,
+  "grad_div_global_only": true,
+  "grad_div_spatial_only": true,
+  "grad_div_max_tokens": 128,
+  "use_router_div": false,
+  "router_div_coef": 0.003,
+  "router_div_max_tokens": 256,
+  "use_router_grad_div": false,
+  "router_grad_div_coef": 0.001,
+  "router_grad_div_max_tokens": 256,
+  "router_grad_div_global_only": true,
+  "router_grad_div_detach_upstream": true,
+  "router_grad_div_detach_sim": true,
+  "use_hybrid_spatial_moe": true,
+  "spatial_moe": {
+    "num_experts": 16,
+    "top_k": 2,
+    "expert_hidden": 512,
+    "expert_dropout": 0.2,
+    "router_temperature": 1.0,
+    "router_noise_std": 0.02,
+    "router_detach_for_topk": false,
+    "combine_method": "softmax",
+    "capacity_factor": 2,
+    "moe_residual_scale": 1.0,
+    "use_load_balance": true,
+    "load_balance_coef": 0.0001,
+    "use_z_loss": true,
+    "z_loss_coef": 0.0001,
+    "use_router_entropy_aux": false,
+    "router_entropy_coef": 0.0
+  },
+  "moe_num_spatial_layers": 1,
+  "moe_num_global_layers": 1,
+  "use_spatial_pos_embed": true,
+  "feature_channels": 384,
+  "backbone_stage3_depth": 3
+}
+========================================================================
+ep 1/400  tr@1=0.0945  tr@2=0.1512  tr@5=0.2613  te@1=0.1483 te@2=0.2312 te@5=0.3790  dr~0.001 util~0.999  es=12  router_entropy_tr=2.609 router_entropy_val=2.472 tokμ=320k tokσ=81k  expert_entropy=4.162 router_purity=0.029 output_sim=0.020 effective_rank=10.878 cka=0.400 pca=9.138
+ep 2/400  tr@1=0.1805  tr@2=0.2688  tr@5=0.4212  te@1=0.2141 te@2=0.3264 te@5=0.4855  dr~0.001 util~0.999  es=12  router_entropy_tr=2.255 router_entropy_val=2.111 tokμ=320k tokσ=87k  expert_entropy=4.044 router_purity=0.097 output_sim=0.002 effective_rank=13.685 cka=0.305 pca=7.862
+ep 3/400  tr@1=0.2437  tr@2=0.3489  tr@5=0.5105  te@1=0.2439 te@2=0.3510 te@5=0.5088  dr~0.046 util~0.954  es=12  router_entropy_tr=1.972 router_entropy_val=1.821 tokμ=305k tokσ=192k  expert_entropy=4.073 router_purity=0.056 output_sim=0.000 effective_rank=11.518 cka=0.258 pca=7.661
+ep 4/400  tr@1=0.2964  tr@2=0.4098  tr@5=0.5745  te@1=0.3068 te@2=0.4228 te@5=0.5862  dr~0.060 util~0.940  es=12  router_entropy_tr=1.667 router_entropy_val=1.569 tokμ=301k tokσ=219k  expert_entropy=4.046 router_purity=0.028 output_sim=0.004 effective_rank=14.958 cka=0.280 pca=9.594
+/root/venv/lib/python3.12/site-packages/torch/optim/lr_scheduler.py:243: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+ep 5/400  tr@1=0.3366  tr@2=0.4573  tr@5=0.6190  te@1=0.3485 te@2=0.4746 te@5=0.6310  dr~0.065 util~0.935  es=12  router_entropy_tr=1.468 router_entropy_val=1.404 tokμ=299k tokσ=257k  expert_entropy=4.014 router_purity=0.042 output_sim=0.016 effective_rank=14.655 cka=0.258 pca=12.171
+ep 6/400  tr@1=0.3701  tr@2=0.4939  tr@5=0.6530  te@1=0.3410 te@2=0.4614 te@5=0.6208  dr~0.065 util~0.935  es=11  router_entropy_tr=1.335 router_entropy_val=1.349 tokμ=299k tokσ=244k  expert_entropy=4.069 router_purity=0.030 output_sim=0.029 effective_rank=13.674 cka=0.271 pca=13.131
+ep 7/400  tr@1=0.4141  tr@2=0.5418  tr@5=0.6956  te@1=0.4023 te@2=0.5233 te@5=0.6803  dr~0.029 util~0.971  es=12  router_entropy_tr=1.252 router_entropy_val=1.261 tokμ=311k tokσ=254k  expert_entropy=4.065 router_purity=0.028 output_sim=0.037 effective_rank=15.364 cka=0.269 pca=14.815
+ep 8/400  tr@1=0.4531  tr@2=0.5820  tr@5=0.7308  te@1=0.4379 te@2=0.5685 te@5=0.7191  dr~0.259 util~0.741  es=12  router_entropy_tr=1.169 router_entropy_val=1.129 tokμ=237k tokσ=247k  expert_entropy=4.057 router_purity=0.028 output_sim=0.045 effective_rank=17.956 cka=0.245 pca=15.110
+ep 9/400  tr@1=0.4818  tr@2=0.6102  tr@5=0.7567  te@1=0.4701 te@2=0.5998 te@5=0.7397  dr~0.169 util~0.831  es=12  router_entropy_tr=1.107 router_entropy_val=1.105 tokμ=266k tokσ=255k  expert_entropy=4.044 router_purity=0.029 output_sim=0.050 effective_rank=18.470 cka=0.236 pca=16.893
+ep 10/400  tr@1=0.5119  tr@2=0.6403  tr@5=0.7801  te@1=0.4762 te@2=0.5986 te@5=0.7406  dr~0.100 util~0.900  es=12  router_entropy_tr=1.084 router_entropy_val=1.110 tokμ=288k tokσ=264k  expert_entropy=4.073 router_purity=0.026 output_sim=0.062 effective_rank=16.936 cka=0.238 pca=16.871
+ep 11/400  tr@1=0.5360  tr@2=0.6640  tr@5=0.7978  te@1=0.5057 te@2=0.6329 te@5=0.7696  dr~0.166 util~0.834  es=12  router_entropy_tr=1.055 router_entropy_val=1.018 tokμ=267k tokσ=259k  expert_entropy=4.070 router_purity=0.026 output_sim=0.062 effective_rank=18.705 cka=0.230 pca=17.620
+ep 12/400  tr@1=0.5590  tr@2=0.6863  tr@5=0.8154  te@1=0.5039 te@2=0.6320 te@5=0.7708  dr~0.201 util~0.799  es=11  router_entropy_tr=1.035 router_entropy_val=1.024 tokμ=256k tokσ=249k  expert_entropy=4.042 router_purity=0.029 output_sim=0.067 effective_rank=18.191 cka=0.225 pca=17.963
+ep 13/400  tr@1=0.5795  tr@2=0.7057  tr@5=0.8327  te@1=0.5312 te@2=0.6511 te@5=0.7780  dr~0.178 util~0.822  es=12  router_entropy_tr=1.019 router_entropy_val=0.991 tokμ=263k tokσ=255k  expert_entropy=4.045 router_purity=0.027 output_sim=0.068 effective_rank=19.946 cka=0.221 pca=18.669
+ep 14/400  tr@1=0.6023  tr@2=0.7262  tr@5=0.8475  te@1=0.5377 te@2=0.6557 te@5=0.7882  dr~0.128 util~0.872  es=12  router_entropy_tr=1.016 router_entropy_val=1.005 tokμ=279k tokσ=270k  expert_entropy=4.054 router_purity=0.028 output_sim=0.072 effective_rank=18.924 cka=0.214 pca=19.074
+ep 15/400  tr@1=0.6193  tr@2=0.7415  tr@5=0.8591  te@1=0.5490 te@2=0.6670 te@5=0.7888  dr~0.135 util~0.865  es=12  router_entropy_tr=0.991 router_entropy_val=0.997 tokμ=277k tokσ=274k  expert_entropy=4.049 router_purity=0.027 output_sim=0.071 effective_rank=21.453 cka=0.211 pca=19.471
+ep 16/400  tr@1=0.6372  tr@2=0.7597  tr@5=0.8707  te@1=0.5373 te@2=0.6613 te@5=0.7887  dr~0.118 util~0.882  es=11  router_entropy_tr=1.013 router_entropy_val=1.028 tokμ=282k tokσ=270k  expert_entropy=4.075 router_purity=0.026 output_sim=0.069 effective_rank=20.217 cka=0.206 pca=19.970
+ep 17/400  tr@1=0.6552  tr@2=0.7747  tr@5=0.8821  te@1=0.5480 te@2=0.6705 te@5=0.7956  dr~0.163 util~0.837  es=10  router_entropy_tr=1.050 router_entropy_val=1.039 tokμ=268k tokσ=260k  expert_entropy=4.151 router_purity=0.061 output_sim=0.066 effective_rank=21.653 cka=0.206 pca=20.286
+ep 18/400  tr@1=0.6698  tr@2=0.7901  tr@5=0.8929  te@1=0.5404 te@2=0.6626 te@5=0.7859  dr~0.161 util~0.839  es=9  router_entropy_tr=1.058 router_entropy_val=1.061 tokμ=269k tokσ=265k  expert_entropy=4.057 router_purity=0.058 output_sim=0.061 effective_rank=21.764 cka=0.203 pca=20.668
+ep 19/400  tr@1=0.6845  tr@2=0.8026  tr@5=0.9020  te@1=0.5567 te@2=0.6785 te@5=0.7982  dr~0.145 util~0.855  es=12  router_entropy_tr=1.071 router_entropy_val=1.065 tokμ=274k tokσ=264k  expert_entropy=4.109 router_purity=0.083 output_sim=0.062 effective_rank=21.140 cka=0.193 pca=21.111
+ep 20/400  tr@1=0.6999  tr@2=0.8153  tr@5=0.9108  te@1=0.5449 te@2=0.6672 te@5=0.7892  dr~0.111 util~0.889  es=11  router_entropy_tr=1.082 router_entropy_val=1.122 tokμ=285k tokσ=268k  expert_entropy=4.161 router_purity=0.074 output_sim=0.057 effective_rank=23.551 cka=0.192 pca=21.400
+ep 21/400  tr@1=0.7119  tr@2=0.8269  tr@5=0.9188  te@1=0.5575 te@2=0.6796 te@5=0.8004  dr~0.095 util~0.905  es=12  router_entropy_tr=1.079 router_entropy_val=1.048 tokμ=290k tokσ=276k  expert_entropy=4.044 router_purity=0.059 output_sim=0.051 effective_rank=22.506 cka=0.185 pca=21.677
+ep 22/400  tr@1=0.7261  tr@2=0.8377  tr@5=0.9246  te@1=0.5598 te@2=0.6731 te@5=0.7971  dr~0.138 util~0.862  es=12  router_entropy_tr=1.074 router_entropy_val=1.068 tokμ=276k tokσ=267k  expert_entropy=4.016 router_purity=0.029 output_sim=0.048 effective_rank=22.227 cka=0.183 pca=22.171
+ep 23/400  tr@1=0.7384  tr@2=0.8480  tr@5=0.9316  te@1=0.5598 te@2=0.6780 te@5=0.7950  dr~0.196 util~0.804  es=11  router_entropy_tr=1.092 router_entropy_val=1.074 tokμ=257k tokσ=263k  expert_entropy=4.257 router_purity=0.063 output_sim=0.046 effective_rank=23.457 cka=0.180 pca=22.413
+ep 24/400  tr@1=0.7486  tr@2=0.8565  tr@5=0.9370  te@1=0.5652 te@2=0.6860 te@5=0.8016  dr~0.124 util~0.876  es=12  router_entropy_tr=1.087 router_entropy_val=1.084 tokμ=281k tokσ=284k  expert_entropy=4.043 router_purity=0.090 output_sim=0.044 effective_rank=21.190 cka=0.179 pca=22.794
+ep 25/400  tr@1=0.7579  tr@2=0.8647  tr@5=0.9423  te@1=0.5537 te@2=0.6780 te@5=0.7920  dr~0.176 util~0.824  es=11  router_entropy_tr=1.092 router_entropy_val=1.057 tokμ=264k tokσ=262k  expert_entropy=4.054 router_purity=0.027 output_sim=0.042 effective_rank=21.463 cka=0.171 pca=23.026
+ep 26/400  tr@1=0.7699  tr@2=0.8725  tr@5=0.9474  te@1=0.5624 te@2=0.6785 te@5=0.7972  dr~0.109 util~0.891  es=10  router_entropy_tr=1.091 router_entropy_val=1.081 tokμ=285k tokσ=283k  expert_entropy=4.054 router_purity=0.043 output_sim=0.040 effective_rank=22.541 cka=0.165 pca=23.377
+ep 27/400  tr@1=0.7794  tr@2=0.8808  tr@5=0.9505  te@1=0.5646 te@2=0.6821 te@5=0.7945  dr~0.144 util~0.856  es=9  router_entropy_tr=1.094 router_entropy_val=1.045 tokμ=274k tokσ=280k  expert_entropy=4.104 router_purity=0.053 output_sim=0.040 effective_rank=21.995 cka=0.172 pca=23.534
+ep 28/400  tr@1=0.7843  tr@2=0.8855  tr@5=0.9547  te@1=0.5663 te@2=0.6779 te@5=0.7996  dr~0.168 util~0.832  es=12  router_entropy_tr=1.072 router_entropy_val=1.062 tokμ=266k tokσ=270k  expert_entropy=4.020 router_purity=0.061 output_sim=0.038 effective_rank=21.850 cka=0.162 pca=23.933
+ep 29/400  tr@1=0.7946  tr@2=0.8915  tr@5=0.9585  te@1=0.5650 te@2=0.6786 te@5=0.7953  dr~0.126 util~0.874  es=11  router_entropy_tr=1.075 router_entropy_val=1.041 tokμ=280k tokσ=283k  expert_entropy=4.073 router_purity=0.043 output_sim=0.037 effective_rank=21.982 cka=0.163 pca=24.344
+ep 30/400  tr@1=0.8000  tr@2=0.8967  tr@5=0.9603  te@1=0.5594 te@2=0.6751 te@5=0.7916  dr~0.109 util~0.891  es=10  router_entropy_tr=1.091 router_entropy_val=1.095 tokμ=285k tokσ=284k  expert_entropy=4.126 router_purity=0.144 output_sim=0.037 effective_rank=22.232 cka=0.153 pca=24.704
+ep 31/400  tr@1=0.8081  tr@2=0.9020  tr@5=0.9629  te@1=0.5632 te@2=0.6795 te@5=0.7965  dr~0.216 util~0.784  es=9  router_entropy_tr=1.072 router_entropy_val=1.027 tokμ=251k tokσ=263k  expert_entropy=3.985 router_purity=0.080 output_sim=0.042 effective_rank=22.256 cka=0.156 pca=24.742
+ep 32/400  tr@1=0.8139  tr@2=0.9071  tr@5=0.9663  te@1=0.5714 te@2=0.6874 te@5=0.7980  dr~0.201 util~0.799  es=12  router_entropy_tr=1.073 router_entropy_val=1.056 tokμ=256k tokσ=273k  expert_entropy=4.095 router_purity=0.091 output_sim=0.045 effective_rank=22.772 cka=0.152 pca=24.838
+ep 33/400  tr@1=0.8169  tr@2=0.9100  tr@5=0.9671  te@1=0.5758 te@2=0.6849 te@5=0.7935  dr~0.189 util~0.811  es=12  router_entropy_tr=1.067 router_entropy_val=1.050 tokμ=260k tokσ=267k  expert_entropy=3.946 router_purity=0.129 output_sim=0.044 effective_rank=23.065 cka=0.143 pca=25.049
+ep 34/400  tr@1=0.8230  tr@2=0.9124  tr@5=0.9692  te@1=0.5649 te@2=0.6816 te@5=0.7916  dr~0.202 util~0.798  es=11  router_entropy_tr=1.068 router_entropy_val=1.046 tokμ=255k tokσ=269k  expert_entropy=4.003 router_purity=0.044 output_sim=0.046 effective_rank=22.324 cka=0.144 pca=24.804
+ep 35/400  tr@1=0.8285  tr@2=0.9171  tr@5=0.9709  te@1=0.5686 te@2=0.6788 te@5=0.7881  dr~0.203 util~0.797  es=10  router_entropy_tr=1.066 router_entropy_val=1.071 tokμ=255k tokσ=276k  expert_entropy=4.087 router_purity=0.106 output_sim=0.045 effective_rank=23.383 cka=0.138 pca=25.132
+ep 36/400  tr@1=0.8332  tr@2=0.9203  tr@5=0.9720  te@1=0.5627 te@2=0.6784 te@5=0.7856  dr~0.205 util~0.795  es=9  router_entropy_tr=1.086 router_entropy_val=1.098 tokμ=254k tokσ=272k  expert_entropy=4.017 router_purity=0.102 output_sim=0.044 effective_rank=24.620 cka=0.139 pca=25.450
+ep 37/400  tr@1=0.8358  tr@2=0.9216  tr@5=0.9732  te@1=0.5623 te@2=0.6775 te@5=0.7916  dr~0.222 util~0.778  es=8  router_entropy_tr=1.097 router_entropy_val=1.055 tokμ=249k tokσ=271k  expert_entropy=3.965 router_purity=0.037 output_sim=0.048 effective_rank=25.061 cka=0.132 pca=25.641
+ep 38/400  tr@1=0.8379  tr@2=0.9250  tr@5=0.9737  te@1=0.5649 te@2=0.6761 te@5=0.7867  dr~0.167 util~0.833  es=7  router_entropy_tr=1.087 router_entropy_val=1.087 tokμ=267k tokσ=278k  expert_entropy=4.091 router_purity=0.064 output_sim=0.047 effective_rank=23.150 cka=0.143 pca=25.403
+ep 39/400  tr@1=0.8398  tr@2=0.9263  tr@5=0.9754  te@1=0.5660 te@2=0.6803 te@5=0.7931  dr~0.168 util~0.832  es=6  router_entropy_tr=1.091 router_entropy_val=1.088 tokμ=266k tokσ=282k  expert_entropy=4.012 router_purity=0.076 output_sim=0.051 effective_rank=23.970 cka=0.135 pca=25.566
+ep 40/400  tr@1=0.8452  tr@2=0.9293  tr@5=0.9769  te@1=0.5681 te@2=0.6837 te@5=0.7921  dr~0.159 util~0.841  es=5  router_entropy_tr=1.095 router_entropy_val=1.082 tokμ=269k tokσ=274k  expert_entropy=3.929 router_purity=0.133 output_sim=0.050 effective_rank=23.933 cka=0.130 pca=25.844
+ep 41/400  tr@1=0.8479  tr@2=0.9310  tr@5=0.9773  te@1=0.5738 te@2=0.6838 te@5=0.7915  dr~0.213 util~0.787  es=4  router_entropy_tr=1.087 router_entropy_val=1.048 tokμ=252k tokσ=281k  expert_entropy=4.028 router_purity=0.093 output_sim=0.052 effective_rank=25.511 cka=0.133 pca=25.889
+ep 42/400  tr@1=0.8509  tr@2=0.9316  tr@5=0.9779  te@1=0.5635 te@2=0.6780 te@5=0.7882  dr~0.229 util~0.771  es=3  router_entropy_tr=1.093 router_entropy_val=1.069 tokμ=247k tokσ=274k  expert_entropy=4.073 router_purity=0.110 output_sim=0.047 effective_rank=24.589 cka=0.135 pca=25.793
+ep 43/400  tr@1=0.8553  tr@2=0.9359  tr@5=0.9791  te@1=0.5721 te@2=0.6814 te@5=0.7897  dr~0.220 util~0.780  es=2  router_entropy_tr=1.089 router_entropy_val=1.066 tokμ=250k tokσ=280k  expert_entropy=3.909 router_purity=0.103 output_sim=0.046 effective_rank=26.761 cka=0.130 pca=25.829
+ep 44/400  tr@1=0.8560  tr@2=0.9350  tr@5=0.9786  te@1=0.5725 te@2=0.6819 te@5=0.7940  dr~0.199 util~0.801  es=1  router_entropy_tr=1.109 router_entropy_val=1.086 tokμ=256k tokσ=282k  expert_entropy=3.951 router_purity=0.085 output_sim=0.047 effective_rank=26.294 cka=0.130 pca=25.952
+ep 45/400  tr@1=0.8594  tr@2=0.9374  tr@5=0.9797  te@1=0.5760 te@2=0.6847 te@5=0.7924  dr~0.211 util~0.789  es=12  router_entropy_tr=1.097 router_entropy_val=1.050 tokμ=252k tokσ=279k  expert_entropy=3.961 router_purity=0.084 output_sim=0.048 effective_rank=26.930 cka=0.126 pca=26.108
+ep 46/400  tr@1=0.8591  tr@2=0.9369  tr@5=0.9797  te@1=0.5648 te@2=0.6758 te@5=0.7877  dr~0.189 util~0.811  es=11  router_entropy_tr=1.074 router_entropy_val=1.075 tokμ=260k tokσ=281k  expert_entropy=4.024 router_purity=0.076 output_sim=0.045 effective_rank=26.107 cka=0.125 pca=26.032
+ep 47/400  tr@1=0.8628  tr@2=0.9401  tr@5=0.9810  te@1=0.5719 te@2=0.6864 te@5=0.7901  dr~0.203 util~0.797  es=10  router_entropy_tr=1.079 router_entropy_val=1.077 tokμ=255k tokσ=288k  expert_entropy=4.045 router_purity=0.074 output_sim=0.041 effective_rank=27.687 cka=0.119 pca=25.895
+ep 48/400  tr@1=0.8637  tr@2=0.9389  tr@5=0.9809  te@1=0.5716 te@2=0.6858 te@5=0.7944  dr~0.192 util~0.808  es=9  router_entropy_tr=1.091 router_entropy_val=1.101 tokμ=259k tokσ=274k  expert_entropy=4.049 router_purity=0.054 output_sim=0.039 effective_rank=28.520 cka=0.124 pca=25.697
+ep 49/400  tr@1=0.8641  tr@2=0.9422  tr@5=0.9821  te@1=0.5646 te@2=0.6814 te@5=0.7919  dr~0.233 util~0.767  es=8  router_entropy_tr=1.095 router_entropy_val=1.093 tokμ=246k tokσ=275k  expert_entropy=3.987 router_purity=0.111 output_sim=0.038 effective_rank=29.368 cka=0.120 pca=25.943
+ep 50/400  tr@1=0.8675  tr@2=0.9422  tr@5=0.9822  te@1=0.5658 te@2=0.6782 te@5=0.7898  dr~0.227 util~0.773  es=7  router_entropy_tr=1.088 router_entropy_val=1.089 tokμ=247k tokσ=284k  expert_entropy=4.022 router_purity=0.091 output_sim=0.041 effective_rank=29.847 cka=0.115 pca=26.043
+ep 51/400  tr@1=0.8683  tr@2=0.9432  tr@5=0.9824  te@1=0.5704 te@2=0.6786 te@5=0.7884  dr~0.206 util~0.794  es=6  router_entropy_tr=1.109 router_entropy_val=1.085 tokμ=254k tokσ=298k  expert_entropy=4.001 router_purity=0.066 output_sim=0.038 effective_rank=29.865 cka=0.117 pca=26.062
+ep 52/400  tr@1=0.8696  tr@2=0.9441  tr@5=0.9826  te@1=0.5626 te@2=0.6738 te@5=0.7878  dr~0.198 util~0.802  es=5  router_entropy_tr=1.093 router_entropy_val=1.067 tokμ=257k tokσ=289k  expert_entropy=3.974 router_purity=0.086 output_sim=0.041 effective_rank=31.673 cka=0.120 pca=25.978
+ep 53/400  tr@1=0.8713  tr@2=0.9451  tr@5=0.9827  te@1=0.5568 te@2=0.6667 te@5=0.7776  dr~0.251 util~0.749  es=4  router_entropy_tr=1.082 router_entropy_val=1.085 tokμ=240k tokσ=285k  expert_entropy=4.025 router_purity=0.090 output_sim=0.041 effective_rank=31.538 cka=0.120 pca=25.976
+ep 54/400  tr@1=0.8720  tr@2=0.9448  tr@5=0.9826  te@1=0.5694 te@2=0.6780 te@5=0.7822  dr~0.211 util~0.789  es=3  router_entropy_tr=1.096 router_entropy_val=1.071 tokμ=253k tokσ=292k  expert_entropy=3.994 router_purity=0.103 output_sim=0.039 effective_rank=31.177 cka=0.115 pca=26.064
+ep 55/400  tr@1=0.8730  tr@2=0.9459  tr@5=0.9832  te@1=0.5729 te@2=0.6806 te@5=0.7909  dr~0.258 util~0.742  es=2  router_entropy_tr=1.082 router_entropy_val=1.065 tokμ=238k tokσ=282k  expert_entropy=4.003 router_purity=0.065 output_sim=0.041 effective_rank=31.392 cka=0.111 pca=26.192
+ep 56/400  tr@1=0.8732  tr@2=0.9442  tr@5=0.9829  te@1=0.5696 te@2=0.6755 te@5=0.7833  dr~0.238 util~0.762  es=1  router_entropy_tr=1.075 router_entropy_val=1.070 tokμ=244k tokσ=280k  expert_entropy=4.065 router_purity=0.102 output_sim=0.042 effective_rank=31.648 cka=0.119 pca=26.243
+ep 57/400  tr@1=0.8750  tr@2=0.9470  tr@5=0.9839  te@1=0.5670 te@2=0.6744 te@5=0.7824  dr~0.247 util~0.753  es=0  router_entropy_tr=1.091 router_entropy_val=1.062 tokμ=241k tokσ=285k  expert_entropy=4.062 router_purity=0.054 output_sim=0.042 effective_rank=32.993 cka=0.115 pca=26.388
+early stop: eval top1 برای 12 اپوک بهبود نداشت (best=0.5760, min_delta=0.0001)
+[log] آخرین جزئیات اپوک best روی دیسک: ep=45, te@1=0.5760 → M_tiny_41.json
+[checkpoint] بهترین مدل ذخیره شد: checkpoints/M_tiny_41.pt (test_top1=0.5760)
+########################################################################
+# run end: 2026-10-18 21:26:39
+########################################################################
